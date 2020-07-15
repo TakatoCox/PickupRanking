@@ -39,15 +39,15 @@
 }
 
 .image {
-  width: 280px;
   margin-top: 25px;
-  height: auto;
+  height: 210px;
+  width: auto;
 }
 
 @media (max-width: 350px) {
   .image {
-    width: 200px;
-    height: auto;
+    height: 210px;
+    width: auto;
   }
 }
 /*# sourceMappingURL=about.css.map */
