@@ -23,11 +23,11 @@
 .image{
     width: 280px;
     margin-top: 25px;
-    height: 210px;
+    height: auto;
 }
 @media(max-width:350px){
     .image{
         width: 200px;
-        height:130px;
+        height:auto;
     }
 }
