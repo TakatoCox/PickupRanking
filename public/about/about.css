@@ -36,6 +36,7 @@
   -ms-flex-pack: distribute;
       justify-content: space-around;
   width: 80%;
+  margin-bottom: 50px;
 }
 
 .image {
