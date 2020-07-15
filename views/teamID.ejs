@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/teamID/teamID.css">
+    <link rel="stylesheet" href="/nav/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+</head>
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="mainArea">
+        <h1><%=team.teamName%></h1>
+            <div class="listsComponent">
+                <ul>
+                    <h4>Players:</h4>
+                    <%team.players.forEach(player=>{%>
+                        <li><%=player.first%> <%=player.last%></li>
+                    <%});%>
+                </ul>
+                <ul>
+                    <h4>Goalies:</h4>
+                    <%team.goalies.forEach(goalie=>{%>
+                        <li><%=goalie.first%> <%=goalie.last%></li>
+                    <%});%>
+                </ul>
+            </div>
+
+            <div class="statsContainer">
+                <h3>Wins:<div class="statValue"><%=team.wins%></div></h3>
+                <h3>Losses:<div class="statValue"><%=team.losses%></div></h3>
+                <% if(team.losses > 0) {%>
+                <h3>W/L: <div class="statValue"><%= Math.round(10*((team.wins)/(team.losses)*100))/10%>%</div></h3>
+                <%} else {%>
+                <h3><div class="statValue">N/A</div></h3>
+                <%}%>
+            </div>
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

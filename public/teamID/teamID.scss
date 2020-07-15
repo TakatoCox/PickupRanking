@@ -1,0 +1,42 @@
+.mainArea{
+    margin-top: 110px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h1{
+        font-size:40px;
+        color: rgb(17, 0, 255);
+    }
+    ul{
+        margin: 20px;
+    }
+    h4{
+        font-size: 20px;
+        text-decoration: underline;
+    }
+    li{
+        font-size: 25px;
+    }
+}
+.listsComponent{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.statsContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    h3{
+        margin-left: 40px;
+        font-size: 30px;
+        display: flex;
+        flex-direction: row;
+    }
+}
+.statValue{
+    color: red;
+    margin-left: 5px;
+}

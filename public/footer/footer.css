@@ -1,0 +1,13 @@
+.foot {
+  width: 100%;
+  height: 50px;
+  background-color: #a4f1ff;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  border-top: 4px solid red;
+  color: red;
+}

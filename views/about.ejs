@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/about/about.css">
+    <link rel="stylesheet" href="/nav/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+</head>
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+        <div class="aboutMainArea">
+            <div class="descriptionContainer">
+                <div class="bestPickUpHockeyTeams">Best Pickup Hockey Teams</div>
+                <p class="description"> Get your pickup team ranked now! RANK MY TEAM tracks pickup hockey teams located in Southern California.
+                    Rankings are currently based on a single factor: Win/Loss Percentage.<br/><br/>
+                    <div style="font-weight: bold">Email updated stats to: takatocox@gmail.com</div><hr/><br/>
+                    **This beta version will be monitored continuously, and updated accordingly.</p>
+            </div>
+
+            <div class="imagesContainer">
+                <img src="pickup1.jpg" alt="pickup hockey" class="image">
+                <img src="FlyingDustmen.JPG" alt="pickup hockey" class="image">
+                <img src="pickup2.jpg" alt="pickup hockey" class="image">
+            </div>
+        </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

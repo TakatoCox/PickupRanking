@@ -1,0 +1,63 @@
+nav{
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding-bottom: 10px;
+border-top: 4px solid red;
+border-bottom: 4px solid red;
+text-transform: uppercase;
+width: 100%;
+position: fixed;
+top: 0;
+left:0;
+height: 100px;
+background-color: rgb(164, 241, 255);
+}
+.hockeyIcon{
+    width: 80px;
+}
+nav ul{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: flex-end;
+padding: 0;
+}
+@media(max-width:800px){
+    nav ul{
+        flex-direction: column;
+        justify-content: space-evenly;
+        margin-right:5px;
+    }
+}
+nav li{
+list-style-type: none;
+margin-left: 10px;
+margin-right: 10px;
+margin-top: 5px;
+margin-bottom: 5px;
+}
+.navLink:hover{
+    color: blue;
+}
+nav h1{
+font-size: 3em;
+margin:0;
+border: none;
+position: relative;
+align-self: center;
+left:15%;
+}
+@media(max-width:800px){
+    nav h1{
+        font-size: 2em;
+        left: 5%;
+    }
+}
+nav p, nav a{
+color: rgb(0, 0, 0);
+font-weight: 300;
+text-decoration: none;
+}
+
+    

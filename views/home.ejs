@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/home/styles.css">
+    <link rel="stylesheet" href="/nav/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+</head>
+    <%- include('./partials/head.ejs')%> 
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="mainAreaContainer">
+        <h1 class="homeTitle">Current Rankings</h1>
+        <ol class="teamsContainer">
+<!------------------------------------------------First Place------------------------------------------------------------------>
+                <%if(teams.length>0){%>
+                    <a href="/teams/<%= teams[0]._id%>" class="teamAnchor">
+                    <li style="color: gold;">
+                        <div class="teamCard" id="cardID1">
+                            <h3 class="teamName"><%= teams[0].teamName%></h3>
+                            <h2>Wins: <%= teams[0].wins%></h2>
+                            <h2>Losses: <%= teams[0].losses%></h2>
+                            <% if(teams[0].losses > 0) {%>
+                                <h2>W/L: <%= Math.round(10*((teams[0].wins)/(teams[0].losses)*100))/10%>%</h2>
+                            <%} else {%>
+                                <h2>N/A</h2>
+                                <%}%>
+                        </div>
+                    </li>
+                    </a>
+                <%}%>
+
+<!------------------------------------------------Second Place------------------------------------------------------------------>
+                <%if(teams.length>1){%>
+                    <a href="/teams/<%= teams[1]._id%>" class="teamAnchor">
+                    <li style="color: rgb(163, 162, 162)">
+                        <div class="teamCard" id="cardID2">
+                            <h3 class="teamName"><%= teams[1].teamName%></h3>
+                            <h2>Wins: <%= teams[1].wins%></h2>
+                            <h2>Losses: <%= teams[1].losses%></h2>
+                            <% if(teams[1].losses > 0) {%>
+                                <h2>W/L: <%= Math.round(10*((teams[1].wins)/(teams[1].losses)*100))/10%>%</h2>
+                            <%} else {%>
+                                <h2>N/A</h2>
+                                <%}%>                        
+                        </div>
+                    </li>
+                    </a>
+                <%}%>
+<!------------------------------------------------Third Place------------------------------------------------------------------>
+                <%if(teams.length>2){%>  
+                    <a href="/teams/<%= teams[2]._id%>" class="teamAnchor">              
+                    <li style="color: brown">
+                        <div id="cardID3" class="teamCard">
+                            <h3 class="teamName"><%= teams[2].teamName%></h3>
+                            <h2>Wins: <%= teams[2].wins%></h2>
+                            <h2>Losses: <%= teams[2].losses%></h2>
+                            <% if(teams[2].losses > 0) {%>
+                                <h2>W/L: <%= Math.round(10*((teams[2].wins)/(teams[2].losses)*100))/10%>%</h2>
+                            <%} else {%>
+                                <h2>N/A</h2>
+                                <%}%>
+                        </div>
+                    </li>
+                    </a>
+                <%}%>
+
+<!------------------------------------------------Fourth and Beyond------------------------------------------------------------->
+                <%if(teams.length>3){%>
+                    <%teams.splice(0,3)%>
+                    <% teams.forEach(team=>{%>
+                        <a href="/teams/<%= team._id%>" class="teamAnchor">
+                        <li style="color: black">
+                            <div id="cardID4" class="teamCard">
+                                <h3 class="teamName"><%= team.teamName%></h3>
+                                <h2>Wins: <%= team.wins%></h2>
+                                <h2>Losses: <%= team.losses%></h2>
+                                <% if(team.losses > 0) {%>
+                                    <h2>W/L: <%= Math.round(10*((team.wins)/(team.losses)*100))/10%>%</h2>
+                                <%} else {%>
+                                    <h2>N/A</h2>
+                                    <%}%>
+                            </div>
+                        </li>
+                        </a>
+                    <%})%>
+                <%}%>
+        </ol>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>
