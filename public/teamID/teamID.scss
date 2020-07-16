@@ -8,21 +8,51 @@
         font-size:40px;
         color: rgb(17, 0, 255);
     }
-    ul{
+    ol{
         margin: 20px;
+        min-width: 200px;
+    }
+    h6{
+        font-size: 15px;
+        margin: 0;
+        margin-right: 5px;
     }
     h4{
-        font-size: 20px;
+        font-size: 25px;
         text-decoration: underline;
+        margin: 0;
     }
     li{
         font-size: 25px;
+        text-decoration: underline;
     }
 }
 .listsComponent{
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+.playerAndGoalsTitle{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.playerAndGoals{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    border: 1px solid blue; 
+    padding: 3px;
+}
+.goals{
+    margin-left: 5px;
+    margin-top: -5px;
+    padding-left: 5px;
+    color: red;
+    font-size: 25px;
+    border-left: 1px solid black; 
 }
 .statsContainer{
     display: flex;

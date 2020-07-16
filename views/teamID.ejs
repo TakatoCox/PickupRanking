@@ -13,18 +13,24 @@
     <div class="mainArea">
         <h1><%=team.teamName%></h1>
             <div class="listsComponent">
-                <ul>
-                    <h4>Players:</h4>
-                    <%team.players.forEach(player=>{%>
-                        <li><%=player.first%> <%=player.last%></li>
+                <ol>
+                    <div class="playerAndGoalsTitle"><h4>Players</h4> <h6>G</h6></div>
+                    <%goalsSorted.forEach(player=>{%>
+                        <div class="playerAndGoals">
+                            <li><%=player.first%> <%=player.last%></li>
+                            <div class="goals"><%=player.goals%></div>
+                        </div>
                     <%});%>
-                </ul>
-                <ul>
-                    <h4>Goalies:</h4>
-                    <%team.goalies.forEach(goalie=>{%>
-                        <li><%=goalie.first%> <%=goalie.last%></li>
+                </ol>
+                <ol>
+                    <div class="playerAndGoalsTitle"><h4>Goalies</h4> <h6>W</h6></div>
+                    <%winsSorted.forEach(goalie=>{%>
+                        <div class="playerAndGoals">
+                            <li><%=goalie.first%> <%=goalie.last%></li>
+                            <div class="goals"><%=goalie.wins%></div>
+                        </div>
                     <%});%>
-                </ul>
+                </ol>
             </div>
 
             <div class="statsContainer">

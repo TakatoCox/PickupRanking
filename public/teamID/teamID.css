@@ -18,17 +18,26 @@
   color: #1100ff;
 }
 
-.mainArea ul {
+.mainArea ol {
   margin: 20px;
+  min-width: 200px;
+}
+
+.mainArea h6 {
+  font-size: 15px;
+  margin: 0;
+  margin-right: 5px;
 }
 
 .mainArea h4 {
-  font-size: 20px;
+  font-size: 25px;
   text-decoration: underline;
+  margin: 0;
 }
 
 .mainArea li {
   font-size: 25px;
+  text-decoration: underline;
 }
 
 .listsComponent {
@@ -42,6 +51,49 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+.playerAndGoalsTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.playerAndGoals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 1px solid blue;
+  padding: 3px;
+}
+
+.goals {
+  margin-left: 5px;
+  margin-top: -5px;
+  padding-left: 5px;
+  color: red;
+  font-size: 25px;
+  border-left: 1px solid black;
 }
 
 .statsContainer {

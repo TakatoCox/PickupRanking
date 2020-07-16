@@ -52,7 +52,13 @@ router.get('/teams/:id', (req,res)=>{
   const id = req.params.id;
   Team.findById(id)
   .then(result=>{
-    res.render('teamID',{team: result})
+    const goalsSorted = result.players.sort(function(a,b){
+      return b.goals - a.goals;
+    })
+    const winsSorted = result.goalies.sort(function(a,b){
+      return b.wins - a.wins;
+    })
+    res.render('teamID',{team: result, goalsSorted, winsSorted})
   })
   .catch(err=>{
     console.log(err);
