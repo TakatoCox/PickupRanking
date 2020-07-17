@@ -11,3 +11,8 @@
   border-top: 4px solid red;
   color: red;
 }
+@media(max-width:500px){
+  .foot{
+    display: none;
+  }
+}

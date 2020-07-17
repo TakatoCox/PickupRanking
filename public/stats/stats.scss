@@ -6,6 +6,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    @media(max-width:800px){
+        margin-top: 30px;
+    }
     .listsContainer{
         display: flex;
         flex-direction: row;

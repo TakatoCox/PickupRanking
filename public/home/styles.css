@@ -21,6 +21,12 @@
   background-color: white;
 }
 
+@media (max-width: 800px) {
+  .mainAreaContainer {
+    margin-top: 30px;
+  }
+}
+
 .mainAreaContainer {
   width: 95%;
   background: none;

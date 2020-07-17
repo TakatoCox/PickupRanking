@@ -17,6 +17,12 @@
           justify-content: center;
 }
 
+@media (max-width: 800px) {
+  .statsMainArea {
+    margin-top: 30px;
+  }
+}
+
 .statsMainArea .listsContainer {
   display: -webkit-box;
   display: -ms-flexbox;

@@ -9,6 +9,9 @@
   justify-content: space-around;
   align-items: center;
   min-height: 80vh;
+  @media(max-width:800px){
+    margin-top: 30px;
+}
 }
 .teamsContainer{
   display: flex;

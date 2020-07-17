@@ -24,9 +24,18 @@ align-items: flex-end;
 padding: 0;
 }
 @media(max-width:800px){
+    nav{
+    height:30px;
+    padding: 0;
+    justify-content: center;
+    }
+    .hockeyIcon{
+        display: none;
+    }
     nav ul{
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
+        flex-wrap: wrap;
         margin-right:5px;
     }
 }
@@ -50,8 +59,9 @@ left:15%;
 }
 @media(max-width:900px){
     nav h1{
-        font-size: 2em;
-        left: 5%;
+        display: none;
+        /* font-size: 2em;
+        left: 5%; */
     }
 }
 nav p, nav a{
@@ -59,5 +69,9 @@ color: rgb(0, 0, 0);
 font-weight: 300;
 text-decoration: none;
 }
-
+@media(max-width: 300px){
+    nav a{
+    font-size: 12px;
+    }
+}
     

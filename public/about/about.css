@@ -23,6 +23,12 @@
   font-weight: 800;
 }
 
+@media (max-width: 800px) {
+  .descriptionContainer {
+    margin-top: 30px;
+  }
+}
+
 .imagesContainer {
   display: -webkit-box;
   display: -ms-flexbox;
