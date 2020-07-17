@@ -5,8 +5,9 @@
   padding-top: 20px;
   padding-bottom: 5px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
   min-height: 80vh;
   @media(max-width:800px){
@@ -18,7 +19,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
 }
 .teamsTitle{
   font-size: 40px;
@@ -28,15 +28,19 @@
   text-decoration: none;
 }
 .teamList{
-  margin: 0;
+  margin-bottom: 20px;
   list-style: none;
-  padding: 0;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   overflow: auto;
-  width: 100vw;
+  padding: 0;
+  max-height: 400px;
+  border: 1px solid black;
+  padding: 10px;
+  background-color: rgb(228, 224, 224);
+  max-width: 300px;
 }
 @media(max-width:685px){
   .teamList{
@@ -44,19 +48,17 @@
   }
 }
 .team{
-  margin: 10px;
+  margin: 0;
   font-size: 20px;
-  white-space: nowrap;
-  background-color: rgb(39, 164, 248);
-  border-radius:20px;
-  padding: 10px;
-  color: white;
+  padding: 3px;
+  color: black;
   border: 2px solid red;
+  min-width: 200px;
+  text-decoration: underline;
 }
 .team:hover{
   color: blue;
   cursor: pointer;
-  font-size: 30px;
 }
 .addTeamContainer{
   display: flex;

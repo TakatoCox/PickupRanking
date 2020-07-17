@@ -36,11 +36,12 @@
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100vw;
 }
 
 .statsMainArea ol {
-  margin: 20px;
   min-width: 200px;
+  padding: 0;
 }
 
 .statsMainArea li {
@@ -75,33 +76,6 @@
   color: blue;
 }
 
-.statsMainArea .playerAndGoalsTitle {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  border: 2px solid red;
-}
-
-.statsMainArea .playerAndGoalsTitle .statsAcronyms {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .statsMainArea .nameAndStats {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -117,6 +91,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   border: 1px solid blue;
+  min-width: 270px;
 }
 
 .statsMainArea .nameAndStats .statsValues {

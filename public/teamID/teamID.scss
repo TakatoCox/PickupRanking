@@ -52,17 +52,7 @@
     justify-content: center;
     flex-wrap: wrap;
 }
-.playerAndGoalsTitle{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: flex-end;
-    border: 2px solid red;
-    .statsAcronyms{
-        display: flex;
-        flex-direction: row;
-    }
-}
+
 .playerAndGoals{
     display: flex;
     flex-direction: row;
