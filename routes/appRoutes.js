@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 const { render } = require('node-sass');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 
-
+///////////////////////Home/////////////////////////////
 router.get('/',(req,res)=>{
   Team.find()
     .then(result=>{
@@ -16,6 +16,7 @@ router.get('/',(req,res)=>{
     .catch(err=>console.log(err));
   })
 
+///////////////////////About/////////////////////////////
 router.get('/about', (req,res)=>{
     res.render('about');
 });
@@ -28,7 +29,7 @@ router.get('/teams', (req,res)=>{
   .catch(err=>console.log(err))
 });
 
-
+///////////////////////Teams/Create/////////////////////////////
 router.post('/teams', parseUrlencoded, (req,res)=>{
   const playerParse = JSON.parse(req.body.Players);
   const goalieParse = JSON.parse(req.body.Goalies);
@@ -47,7 +48,32 @@ router.post('/teams', parseUrlencoded, (req,res)=>{
   })
   .catch(err=>console.log(err));
 })
+///////////////////////Stats Page/////////////////////////////
+router.get('/stats',(req,res)=>{
+  Team.find()
+  .then(result=>{
+    let arrPlayersSorted = [];
+    result.map(team=>{
+     arrPlayersSorted.push(...team.players);
+    });
+    const playersSorted = arrPlayersSorted.sort(function(a,b){
+      return b.goals - a.goals
+    });
+    let arrGoalieSorted = [];
+    result.map(team=>{
+      arrGoalieSorted.push(...team.goalies);
+    });
+    const goaliesSorted = arrGoalieSorted.sort(function(a,b){
+      return b.wins - a.wins
+    })
+      res.render('stats',{players: playersSorted, goalies: goaliesSorted})
+  })
+  .catch(err=>{
+    console.log(err);
+  })
+})
 
+///////////////////////Team Page/////////////////////////////
 router.get('/teams/:id', (req,res)=>{
   const id = req.params.id;
   Team.findById(id)
@@ -65,6 +91,7 @@ router.get('/teams/:id', (req,res)=>{
   })
 })
 
+///////////////////////404/////////////////////////////
 router.use((req,res)=>{
     res.status(404).render('404');
 })

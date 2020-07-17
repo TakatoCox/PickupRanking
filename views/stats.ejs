@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stats/stats.css">
+    <link rel="stylesheet" href="/nav/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+</head>
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+     <div class="statsMainArea">
+         <div class="listsContainer">
+            <ol>
+                <div class="playerAndGoalsTitle"><h4>Players</h4> <h6>G</h6></div>
+                <%players.forEach(player=>{%>
+                    <div class="nameAndGoals">
+                        <li><%= player.first %> <%= player.last %></li>
+                        <div class="goals"><%= player.goals %></div>
+                    </div>
+                <%})%>
+            </ol>
+            <ol>
+                <div class="playerAndGoalsTitle"><h4>Goalies</h4> <h6>W</h6></div>
+                <%goalies.forEach(goalie=>{%>
+                    <div class="nameAndGoals">
+                        <li><%= goalie.first %> <%= goalie.last %></li>
+                        <div class="goals"><%= goalie.wins %></div>
+                    </div>
+                <%})%>
+            </ol>
+        </div>
+     </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+</html>

@@ -24,9 +24,10 @@
 }
 
 .mainArea h6 {
-  font-size: 15px;
+  font-size: 25px;
   margin: 0;
   margin-right: 5px;
+  text-decoration: underline;
 }
 
 .mainArea h4 {

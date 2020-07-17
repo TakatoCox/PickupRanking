@@ -48,7 +48,7 @@ position: relative;
 align-self: center;
 left:15%;
 }
-@media(max-width:800px){
+@media(max-width:900px){
     nav h1{
         font-size: 2em;
         left: 5%;
