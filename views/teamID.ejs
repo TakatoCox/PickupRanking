@@ -32,11 +32,20 @@
                     <%});%>
                 </ol>
                 <ol>
-                    <div class="playerAndGoalsTitle"><h4>Goalies</h4> <h6>W</h6></div>
+                    <div class="playerAndGoalsTitle">
+                        <h4>Goalies</h4>
+                        <div class="statsAcronyms">
+                            <h6>W</h6>
+                            <h6>GP</h6>
+                        </div> 
+                    </div>
                     <%winsSorted.forEach(goalie=>{%>
                         <div class="playerAndGoals">
                             <li><%=goalie.first%> <%=goalie.last%></li>
-                            <div class="value"><%=goalie.wins%></div>
+                            <div class="statsValues">
+                                <div class="value"><%=goalie.wins%></div>
+                                <div class="value"><%=goalie.gp%></div>
+                            </div>
                         </div>
                     <%});%>
                 </ol>

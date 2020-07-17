@@ -49,6 +49,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  padding: 3px;
+  padding-right: 0;
 }
 
 .statsMainArea h6 {
@@ -58,8 +60,8 @@
   text-decoration: underline;
   border-left: 2px solid black;
   width: 20px;
-  margin-left: 5px;
   padding-left: 5px;
+  padding-right: 5px;
   height: 30px;
   text-align: center;
   vertical-align: middle;
@@ -114,7 +116,6 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  padding: 3px;
   border: 1px solid blue;
 }
 
@@ -129,12 +130,13 @@
 }
 
 .statsMainArea .value {
-  margin-left: 5px;
   padding-left: 5px;
+  padding-right: 5px;
   color: red;
   font-size: 25px;
   border-left: 1px solid black;
   width: 20px;
   text-align: center;
+  height: 35px;
 }
 /*# sourceMappingURL=stats.css.map */
