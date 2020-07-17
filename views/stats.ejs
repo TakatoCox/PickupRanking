@@ -13,20 +13,29 @@
      <div class="statsMainArea">
          <div class="listsContainer">
             <ol>
-                <div class="playerAndGoalsTitle"><h4>Players</h4> <h6>G</h6></div>
+                <div class="playerAndGoalsTitle">
+                    <h4>Players</h4> 
+                    <div class="statsAcronyms">
+                        <h6>G</h6>
+                        <h6>GP</h6>
+                    </div>
+                </div>
                 <%players.forEach(player=>{%>
-                    <div class="nameAndGoals">
+                    <div class="nameAndStats">
                         <li><%= player.first %> <%= player.last %></li>
-                        <div class="goals"><%= player.goals %></div>
+                        <div class="statsValues">
+                            <div class="value"><%= player.goals %></div>
+                            <div class="value"><%=player.gp%></div>
+                        </div>
                     </div>
                 <%})%>
             </ol>
             <ol>
                 <div class="playerAndGoalsTitle"><h4>Goalies</h4> <h6>W</h6></div>
                 <%goalies.forEach(goalie=>{%>
-                    <div class="nameAndGoals">
+                    <div class="nameAndStats">
                         <li><%= goalie.first %> <%= goalie.last %></li>
-                        <div class="goals"><%= goalie.wins %></div>
+                        <div class="value"><%= goalie.wins %></div>
                     </div>
                 <%})%>
             </ol>

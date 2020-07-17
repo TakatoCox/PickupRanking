@@ -67,7 +67,8 @@
         if(arrayPlayer.length < 15){
         arrayPlayer[x] = {first: document.getElementById("playerFirstName").value,
                         last: document.getElementById("playerLastName").value,
-                        goals: 0}
+                        goals: 0,
+                        gp:0}
         x++;
         document.getElementById("playerFirstName").value = "";
         document.getElementById("playerLastName").value = "";
@@ -85,7 +86,8 @@
         if(arrayGoalie.length < 3){
         arrayGoalie[z] = {first:document.getElementById("goalieFirstName").value,
                         last: document.getElementById("goalieLastName").value,
-                        wins: 0};
+                        wins: 0,
+                        gp:0};
         z++;
         document.getElementById("goalieFirstName").value = "";
         document.getElementById("goalieLastName").value = "";

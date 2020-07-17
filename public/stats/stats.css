@@ -44,16 +44,26 @@
 }
 
 .statsMainArea li {
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 25px;
   text-decoration: underline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .statsMainArea h6 {
-  font-size: 20px;
+  font-size: 12px;
+  font-weight: 1000;
   margin: 0;
-  color: blue;
   text-decoration: underline;
+  border-left: 2px solid black;
+  width: 20px;
+  margin-left: 5px;
+  padding-left: 5px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
 }
 
 .statsMainArea h4 {
@@ -77,9 +87,20 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
+  border: 2px solid red;
 }
 
-.statsMainArea .nameAndGoals {
+.statsMainArea .playerAndGoalsTitle .statsAcronyms {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.statsMainArea .nameAndStats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,11 +118,23 @@
   border: 1px solid blue;
 }
 
-.statsMainArea .goals {
+.statsMainArea .nameAndStats .statsValues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.statsMainArea .value {
   margin-left: 5px;
   padding-left: 5px;
   color: red;
   font-size: 25px;
   border-left: 1px solid black;
+  width: 20px;
+  text-align: center;
 }
 /*# sourceMappingURL=stats.css.map */

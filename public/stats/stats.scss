@@ -20,15 +20,25 @@
         min-width: 200px;
     }
     li{
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 25px;
         text-decoration: underline;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
     h6{
-        font-size: 20px;
+        font-size: 12px;
+        font-weight: 1000;
         margin: 0;
-        color: blue;
         text-decoration: underline;
+        border-left: 2px solid black;
+        width: 20px;
+        margin-left: 5px;
+        padding-left: 5px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
     }
     h4{
         font-size: 25px;
@@ -41,20 +51,31 @@
         flex-direction: row;
         justify-content: space-between;
         align-items: flex-end;
+        border: 2px solid red;
+        .statsAcronyms{
+            display: flex;
+            flex-direction: row;
+        }
     }
-    .nameAndGoals{
+    .nameAndStats{
         display:flex;
         flex-direction: row;
         justify-content: space-between; 
         align-items: flex-end;
         padding: 3px;
         border: 1px solid blue; 
+        .statsValues{
+            display: flex;
+            flex-direction: row;
+        }
     }
-    .goals{
+    .value{
         margin-left: 5px;
         padding-left: 5px;
         color: red;
         font-size: 25px;
         border-left: 1px solid black; 
+        width:20px;
+        text-align: center; 
     }
 }

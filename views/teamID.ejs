@@ -14,11 +14,20 @@
         <h1><%=team.teamName%></h1>
             <div class="listsComponent">
                 <ol>
-                    <div class="playerAndGoalsTitle"><h4>Players</h4> <h6>G</h6></div>
+                    <div class="playerAndGoalsTitle">
+                        <h4>Players</h4> 
+                        <div class="statsAcronyms">
+                            <h6>G</h6>
+                            <h6>GP</h6>
+                        </div>
+                    </div>
                     <%goalsSorted.forEach(player=>{%>
                         <div class="playerAndGoals">
                             <li><%=player.first%> <%=player.last%></li>
-                            <div class="goals"><%=player.goals%></div>
+                            <div class="statsValues">
+                                <div class="value"><%=player.goals%></div>
+                                <div class="value"><%=player.gp%></div>
+                            </div>
                         </div>
                     <%});%>
                 </ol>
@@ -27,7 +36,7 @@
                     <%winsSorted.forEach(goalie=>{%>
                         <div class="playerAndGoals">
                             <li><%=goalie.first%> <%=goalie.last%></li>
-                            <div class="goals"><%=goalie.wins%></div>
+                            <div class="value"><%=goalie.wins%></div>
                         </div>
                     <%});%>
                 </ol>

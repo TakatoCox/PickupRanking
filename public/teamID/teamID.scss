@@ -16,10 +16,18 @@
         min-width: 200px;
     }
     h6{
-        font-size: 25px;
+        font-size: 12px;
+        font-weight: 1000;
         margin: 0;
-        margin-right: 5px;
         text-decoration: underline;
+        border-left: 2px solid black;
+        width: 20px;
+        margin-left: 5px;
+        padding-left: 5px;
+        height: 30px;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 30px;
     }
     h4{
         font-size: 25px;
@@ -29,6 +37,9 @@
     li{
         font-size: 25px;
         text-decoration: underline;
+        overflow: hidden; 
+        text-overflow: ellipsis;
+        white-space: nowrap;
     }
 }
 .listsComponent{
@@ -42,6 +53,11 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
+    border: 2px solid red;
+    .statsAcronyms{
+        display: flex;
+        flex-direction: row;
+    }
 }
 .playerAndGoals{
     display: flex;
@@ -50,14 +66,20 @@
     align-items: flex-end;
     border: 1px solid blue; 
     padding: 3px;
+    .statsValues{
+        display: flex;
+        flex-direction: row;
+        min-width: 25px;
+    }
 }
-.goals{
+.value{
     margin-left: 5px;
-    margin-top: -5px;
     padding-left: 5px;
     color: red;
     font-size: 25px;
     border-left: 1px solid black; 
+    width:20px;
+    text-align: center;
 }
 .statsContainer{
     display: flex;
