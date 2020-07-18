@@ -37,8 +37,9 @@ body{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  overflow: auto;
+  overflow: scroll;
   width: 100%;
+  border: 1px solid black;
   max-height: 500px;
   @media(max-width:400px){
     max-height: 250px;
