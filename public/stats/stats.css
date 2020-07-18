@@ -49,8 +49,9 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 3px;
-  padding-right: 0;
-  margin-left: 35px;
+  padding-right: 3px;
+  padding-left: 0;
+  margin-left: 45px;
 }
 
 .statsMainArea h6 {
@@ -91,7 +92,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   border: 1px solid black;
-  min-width: 270px;
+  min-width: 300px;
 }
 
 .statsMainArea .nameAndStats .statsValues {

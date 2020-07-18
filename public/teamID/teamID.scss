@@ -13,8 +13,9 @@
     }
     ol{
         margin: 0;
-        min-width: 200px;
+        width:100%;
         padding: 0;
+        margin: 20px;
     }
     h6{
         font-size: 12px;
@@ -63,10 +64,10 @@
     justify-content: space-between;
     align-items: flex-end;
     border: 1px solid black; 
+    width: 300px;
     .statsValues{
         display: flex;
         flex-direction: row;
-        min-width: 25px;
     }
 }
 .value{

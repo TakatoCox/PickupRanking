@@ -26,8 +26,9 @@
 
 .mainArea ol {
   margin: 0;
-  min-width: 200px;
+  width: 100%;
   padding: 0;
+  margin: 20px;
 }
 
 .mainArea h6 {
@@ -96,6 +97,7 @@
       -ms-flex-align: end;
           align-items: flex-end;
   border: 1px solid black;
+  width: 300px;
 }
 
 .playerAndGoals .statsValues {
@@ -106,7 +108,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  min-width: 25px;
 }
 
 .value {
