@@ -108,7 +108,6 @@ body {
   color: black;
   width: 100%;
   padding-top: 5px;
-  margin-top: 40px;
   border-top: 2px solid blue;
 }
 
@@ -124,6 +123,11 @@ body {
 .mainAreaContainer .countContainer p {
   color: #ee8383;
   font-weight: bold;
+}
+
+.mainAreaContainer .countDown {
+  margin-top: 10px;
+  color: red;
 }
 
 .mainAreaContainer .statsContainer {
