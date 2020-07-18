@@ -1,15 +1,31 @@
 body{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background-image: url("../ice.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  // .zamboni{
+  //   width:60px;
+  //   height: 100px;
+  //   background-color: black;
+  //   position: relative;
+  //   left: 0;
+  //   z-index: -1;
+  //   animation-name: zamboni;
+  //   animation-duration: 20s;
+  //   animation-iteration-count: infinite;
+  //   border-radius: 5px;
+  // }
 }
+// @keyframes zamboni{
+//   0%   {left:50vw; top:0px;}
+//   50%  {left:50vw; top:100vh;}
+//   100%  {left:50vw; top:0px;}
+// }
 .mainAreaContainer{
-  width: 100%;
-  margin-top: 117px;
+  min-width: 100vw;
+  margin-top: 107px;
   margin-bottom: 57px;
   padding-top: 20px;
   padding-bottom: 5px;
@@ -18,7 +34,6 @@ body{
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: flex-start;
-  min-height: 80vh;
   @media(max-width:800px){
     margin-top: 30px;
 }
@@ -61,7 +76,7 @@ body{
   width: 100%;
   padding-top:5px;
   border-top: 2px solid rgb(255, 70, 70);
-  background-color: rgb(149, 213, 255);
+  background-color: rgb(198, 232, 255);
   min-height: 130px;
   h5{
     margin: 0;
@@ -130,7 +145,7 @@ h6{
   border: 1px solid red;
   border-bottom: none;
   min-width: 280px; 
-  background-color: rgb(149, 213, 255);
+  background-color: rgb(255, 255, 255);
   .statsValues{
       display: flex;
       flex-direction: row;
