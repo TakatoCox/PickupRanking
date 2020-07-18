@@ -15,19 +15,23 @@
     <div class="mainArea">
         <div class="standingsTitle">Standings</div>
         <div class="teamsContainer">
-            <div class="teamAndStats">
-                <div class="team" style="color:blue;"></div> 
-                    <h6>W</h6>
-                    <h6>L</h6>
+            <div class="nameAndStats">
+                <h4>Players</h4> 
+                <div class="statsValues">
+                    <h6>G</h6>
+                    <h6>GP</h6>
+                </div>
             </div>
             <ol class="teamList" type="1s">
                 <%winsSorted.forEach(team =>{%>
-                    <div class="teamAndStats">
+                    <div class="nameAndStats">
                         <a href="/teams/<%= team._id%>" class="teamAnchor">
                             <li class="team"><%=team.teamName%></li>
                         </a>
-                        <div class="value"><%=team.wins%></div>
-                        <div class="value"><%=team.losses%></div>
+                        <div class="statsValues">
+                            <div class="value"><%=team.wins%></div>
+                            <div class="value"><%=team.losses%></div>
+                        </div>
                     </div>
                 <% }) %>
             </ol>

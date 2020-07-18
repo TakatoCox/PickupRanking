@@ -84,6 +84,10 @@ h6 {
   line-height: 30px;
 }
 
+h4 {
+  margin: 0;
+}
+
 .teamList {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -102,7 +106,6 @@ h6 {
   padding: 0;
   margin: 0;
   max-height: 400px;
-  max-width: 300px;
 }
 
 @media (max-width: 685px) {
@@ -113,7 +116,7 @@ h6 {
   }
 }
 
-.teamAndStats {
+.nameAndStats {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,12 +130,13 @@ h6 {
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid red;
+  border: 1px solid #ff4141;
   border-bottom: none;
-  min-width: 270px;
+  background-color: #95d5ff;
+  min-width: 300px;
 }
 
-.teamAndStats .statsValues {
+.nameAndStats .statsValues {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -148,9 +152,8 @@ h6 {
   font-weight: 400;
   padding: 3px;
   color: black;
-  min-width: 200px;
   text-decoration: underline;
-  margin-left: 25px;
+  margin-left: 35px;
 }
 
 .team:hover {

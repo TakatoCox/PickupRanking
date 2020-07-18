@@ -50,6 +50,9 @@ h6{
   vertical-align: middle;
   line-height: 30px;
 }
+h4{
+  margin: 0;
+}
 .teamList{
   display: flex;
   flex-direction: column;
@@ -59,21 +62,21 @@ h6{
   padding: 0;
   margin: 0;
   max-height: 400px;
-  max-width: 300px;
 }
 @media(max-width:685px){
   .teamList{
     justify-content: flex-start;
   }
 }
-.teamAndStats{
+.nameAndStats{
   display:flex;
   flex-direction: row;
   justify-content: space-between; 
   align-items: flex-end;
-  border: 1px solid red;
+  border: 1px solid rgb(255, 65, 65);
   border-bottom: none;
-  min-width: 270px; 
+  background-color: rgb(149, 213, 255);
+  min-width: 300px; 
   .statsValues{
       display: flex;
       flex-direction: row;
@@ -85,9 +88,8 @@ h6{
   font-weight: 400;
   padding: 3px;
   color: black;
-  min-width: 200px;
   text-decoration: underline;
-  margin-left: 25px;
+  margin-left: 35px;
 }
 .team:hover{
   color: blue;
