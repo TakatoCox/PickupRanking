@@ -105,16 +105,19 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #4d4df8;
   color: black;
-  margin: 20px;
   width: 100%;
   padding-top: 5px;
+  border-top: 2px solid blue;
 }
 
 .mainAreaContainer .countContainer h5 {
   margin: 0;
   font-size: 15px;
+}
+
+.mainAreaContainer .countContainer h4 {
+  color: red;
 }
 
 .mainAreaContainer .countContainer p {
