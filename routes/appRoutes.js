@@ -9,9 +9,23 @@ router.get('/',(req,res)=>{
   Team.find()
     .then(result=>{
         const teams = result.sort(function (a, b) {
-        return (b.wins/b.losses) - (a.wins/a.losses);
+        return b.wins - a.wins;
         });
-      res.render('home', {teams});
+        let arrPlayersSorted = [];
+        result.map(team=>{
+        arrPlayersSorted.push(...team.players);
+        });
+        const players = arrPlayersSorted.sort(function(a,b){
+          return b.goals - a.goals
+        });
+        let arrGoalieSorted = [];
+        result.map(team=>{
+          arrGoalieSorted.push(...team.goalies);
+        });
+        const goalies = arrGoalieSorted.sort(function(a,b){
+          return b.wins - a.wins
+        })
+      res.render('home', {teams, players, goalies});
     })
     .catch(err=>console.log(err));
   })
@@ -21,15 +35,7 @@ router.get('/about', (req,res)=>{
     res.render('about');
 });
 
-router.get('/teams', (req,res)=>{
-  Team.find()
-  .then(result=>{
-    res.render('teams', {teams: result});
-  })
-  .catch(err=>console.log(err))
-});
-
-///////////////////////Teams/Create/////////////////////////////
+///////////////////////Teams/////////////////////////////
 router.post('/teams', parseUrlencoded, (req,res)=>{
   const playerParse = JSON.parse(req.body.Players);
   const goalieParse = JSON.parse(req.body.Goalies);
@@ -48,6 +54,17 @@ router.post('/teams', parseUrlencoded, (req,res)=>{
   })
   .catch(err=>console.log(err));
 })
+
+router.get('/teams', (req,res)=>{
+  Team.find()
+  .then(result=>{
+    const winsSorted = result.sort((a,b)=>{
+      return b.wins - a.wins;
+    })
+    res.render('teams', {winsSorted});
+  })
+  .catch(err=>console.log(err))
+});
 ///////////////////////Stats Page/////////////////////////////
 router.get('/stats',(req,res)=>{
   Team.find()
@@ -73,7 +90,7 @@ router.get('/stats',(req,res)=>{
   })
 })
 
-///////////////////////Team Page/////////////////////////////
+///////////////////////Individual Team Page/////////////////////////////
 router.get('/teams/:id', (req,res)=>{
   const id = req.params.id;
   Team.findById(id)

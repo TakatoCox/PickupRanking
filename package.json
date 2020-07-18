@@ -1,5 +1,5 @@
 {
-  "name": "rankmyteam",
+  "name": "pickupranker",
   "version": "1.0.0",
   "description": "Pick up hockey team ranking",
   "main": "index.js",

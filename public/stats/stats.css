@@ -40,18 +40,17 @@
 }
 
 .statsMainArea ol {
-  min-width: 200px;
   padding: 0;
 }
 
 .statsMainArea li {
   font-size: 25px;
   text-decoration: underline;
-  overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
   padding: 3px;
   padding-right: 0;
+  margin-left: 35px;
 }
 
 .statsMainArea h6 {
@@ -73,6 +72,7 @@
   font-size: 25px;
   text-decoration: underline;
   margin: 0;
+  margin-left: 35px;
   color: blue;
 }
 
@@ -90,7 +90,7 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid blue;
+  border: 1px solid black;
   min-width: 270px;
 }
 

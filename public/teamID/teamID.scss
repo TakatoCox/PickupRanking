@@ -12,8 +12,9 @@
         color: rgb(17, 0, 255);
     }
     ol{
-        margin: 20px;
+        margin: 0;
         min-width: 200px;
+        padding: 0;
     }
     h6{
         font-size: 12px;
@@ -35,15 +36,17 @@
         margin: 0;
         padding: 3px;
         padding-right:0;
+        margin-left: 35px;
     }
     li{
         font-size: 25px;
         text-decoration: underline;
-        overflow: hidden; 
         text-overflow: ellipsis;
         white-space: nowrap;
         padding: 3px;
         padding-right: 0px;
+        margin-left: 35px;
+        margin-right: 3px;
     }
 }
 .listsComponent{
@@ -51,6 +54,7 @@
     flex-direction: row;
     justify-content: center;
     flex-wrap: wrap;
+    width: 100%;
 }
 
 .playerAndGoals{
@@ -58,7 +62,7 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    border: 1px solid blue; 
+    border: 1px solid black; 
     .statsValues{
         display: flex;
         flex-direction: row;

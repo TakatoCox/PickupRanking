@@ -1,0 +1,63 @@
+.addTeamContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    border: 2px solid rgb(39, 164, 248);
+    padding: 10px;
+    background: linear-gradient(to top right, white, 65%, lightblue);
+  }
+  .addTeamTitle{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0;
+    font-size:30px;
+    color: red;
+  }
+  .teamNameForm, .playersForm, .goaliesForm{
+    width:100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    @media(max-width:620px){
+      flex-direction: column;
+      margin: 10px;
+    }
+    input[type=text]{
+      border: 0;
+      font-size: 20px;
+      border-bottom: 1px solid rgb(39, 164, 248);
+      text-align: center;
+      outline: none;
+      margin-left: 5px;
+      background: none;
+      @media(max-width:620px){
+        margin: 10px;
+      }
+    }
+    input[type=button]{
+      background-color: rgba(39, 164, 248, 0.5);
+      border-radius: 50px;
+      border: 0;
+      outline: 0;
+    }
+    input[type=button]:hover{
+       color: blue;
+       font-weight: 700;
+    }
+  }
+  .formSubmitButton{
+    margin-top: 10px;
+    border: none;
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    font-size: 15px;
+    outline: none;
+  }
+  .formSubmitButton:hover{
+    font-size: 20px;
+  }

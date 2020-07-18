@@ -1,0 +1,240 @@
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainAreaContainer {
+  width: 100%;
+  margin-top: 117px;
+  margin-bottom: 57px;
+  padding-top: 20px;
+  padding-bottom: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  min-height: 80vh;
+}
+
+@media (max-width: 800px) {
+  .mainAreaContainer {
+    margin-top: 30px;
+  }
+}
+
+@media (min-width: 850px) {
+  .mainAreaContainer {
+    width: 80%;
+  }
+}
+
+.mainAreaContainer .matchesContainer {
+  min-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px;
+}
+
+.mainAreaContainer .matchesContainer h2 {
+  margin: 0;
+}
+
+.mainAreaContainer .matchesCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+  width: 100%;
+  max-height: 500px;
+}
+
+@media (max-width: 400px) {
+  .mainAreaContainer .matchesCardContainer {
+    max-height: 250px;
+    border: 1px solid black;
+  }
+}
+
+.mainAreaContainer .countContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #4d4df8;
+  color: white;
+  margin: 20px;
+  width: 100%;
+  padding-top: 5px;
+}
+
+.mainAreaContainer .countContainer h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.mainAreaContainer .countContainer p {
+  color: #ee8383;
+  font-weight: bold;
+}
+
+.mainAreaContainer .statsContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 20px;
+}
+
+.mainAreaContainer ol {
+  padding: 0;
+  max-height: 300px;
+  overflow: auto;
+  border-bottom: 1px solid black;
+}
+
+.mainAreaContainer a {
+  color: black;
+}
+
+.mainAreaContainer h3 {
+  margin: 0;
+}
+
+.mainAreaContainer li {
+  font-size: 25px;
+  text-decoration: underline;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 3px;
+  padding-right: 3px;
+  margin-left: 35px;
+}
+
+.mainAreaContainer h6 {
+  font-size: 12px;
+  margin: 0;
+  text-decoration: underline;
+  border-left: 2px solid black;
+  width: 20px;
+  padding-left: 5px;
+  padding-right: 5px;
+  height: 30px;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+}
+
+.teamAndStats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  border: 1px solid red;
+  min-width: 280px;
+}
+
+.teamAndStats .statsValues {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.team {
+  margin: 0;
+  width: 100%;
+  color: black;
+  min-width: 200px;
+  text-decoration: underline;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.value {
+  padding-left: 5px;
+  padding-right: 5px;
+  color: black;
+  font-size: 25px;
+  border-left: 1px solid black;
+  width: 20px;
+  text-align: center;
+  height: 35px;
+}
+/*# sourceMappingURL=home.css.map */

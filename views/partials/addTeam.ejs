@@ -1,0 +1,93 @@
+<form action="/teams" method="POST" class="addTeamContainer">
+    <h2 class="addTeamTitle">Add Team</h2>
+    <div class="teamNameForm">
+        <input type="text" placeholder="Team Name" id="teamName" name="TeamName" required>
+    </div>
+    
+    <div class="playersForm">
+        <label for="teamPlayers">Add Players:</label>
+        <input type="text" id="playerFirstName" placeholder="First Name"></input>
+        <input type="text" id="playerLastName" placeholder="Last Name"></input>
+        <input type="button" id="button1" value="Add" onclick="add_player_to_array(),display_player();"></input>
+    </div>
+    <div id="playerArray" type="text"></div> 
+    <input type="text" id="players" name="Players" style="display: none;">
+
+
+    <div class="goaliesForm">
+        <label for="teamGoalies">Add Goalies:</label>
+        <input type="text" id="goalieFirstName" placeholder="First Name"></input>
+        <input type="text" id="goalieLastName" placeholder="Last Name"></input>
+        <input type="button" id="button2" value="Add" onclick="add_goalie_to_array(),display_goalie();"></input>
+    </div>
+    <div id="goalieArray" type="text" name="goalieName[]"></div>
+    <input type="text" id="goalies" name="Goalies" style="display: none;">
+
+    <button class="formSubmitButton">Submit</button>
+</form>
+
+<script type="text/javascript">
+    var x = 0;
+    var z = 0;
+    var arrayPlayer = Array();
+    var arrayGoalie = Array();
+
+    function add_player_to_array()
+    {
+        if(arrayPlayer.length < 15){
+        arrayPlayer[x] = {first: document.getElementById("playerFirstName").value,
+                        last: document.getElementById("playerLastName").value,
+                        goals: 0,
+                        gp:0}
+        x++;
+        document.getElementById("playerFirstName").value = "";
+        document.getElementById("playerLastName").value = "";
+
+        const stringPlayers = JSON.stringify(arrayPlayer);
+        document.getElementById("players").value = stringPlayers;
+
+        } else {
+            alert("Maximum Number of Players Exceeded!");
+        }
+    }
+
+    function add_goalie_to_array()
+    {
+        if(arrayGoalie.length < 3){
+        arrayGoalie[z] = {first:document.getElementById("goalieFirstName").value,
+                        last: document.getElementById("goalieLastName").value,
+                        wins: 0,
+                        gp:0};
+        z++;
+        document.getElementById("goalieFirstName").value = "";
+        document.getElementById("goalieLastName").value = "";
+
+        const stringGoalies = JSON.stringify(arrayGoalie);
+        document.getElementById("goalies").value = stringGoalies;
+        } else {
+            alert("Maximum Number of Goalies Exceeded!");
+        }
+    }
+
+    function display_player()
+    {
+        var e = "<br/>";   
+        for (var y=0; y<arrayPlayer.length; y++)
+            {
+                e += "Player " + (y+1) + " : " + arrayPlayer[y].first + " " + arrayPlayer[y].last + "<br/>";
+            }
+        document.getElementById("playerArray").innerHTML = e;
+    }
+
+    function display_goalie()
+    {
+        var e = "<br/>";   
+        for (var y=0; y<arrayGoalie.length; y++)
+            {
+                e += "Goalie " + (y+1) + " : " + arrayGoalie[y].first + " "+ arrayGoalie[y].last + "<br/>";
+            }
+        document.getElementById("goalieArray").innerHTML = e;
+    }
+
+</script>
+

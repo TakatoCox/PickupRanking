@@ -3,94 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/home/styles.css">
+    <link rel="stylesheet" href="/home/home.css">
     <link rel="stylesheet" href="/nav/nav.css">
     <link rel="stylesheet" href="/footer/footer.css">
 </head>
     <%- include('./partials/head.ejs')%> 
 <body>
     <%- include('./partials/nav.ejs') %>
-
+<!-- top teams -->
     <div class="mainAreaContainer">
-        <h1 class="homeTitle">Current Rankings</h1>
-        <ol class="teamsContainer">
-<!------------------------------------------------First Place------------------------------------------------------------------>
-                <%if(teams.length>0){%>
-                    <a href="/teams/<%= teams[0]._id%>" class="teamAnchor">
-                    <li style="color: gold;">
-                        <div class="teamCard" id="cardID1">
-                            <h3 class="teamName"><%= teams[0].teamName%></h3>
-                            <h2>Wins: <%= teams[0].wins%></h2>
-                            <h2>Losses: <%= teams[0].losses%></h2>
-                            <% if(teams[0].losses > 0) {%>
-                                <h2>W/L: <%= Math.round(10*((teams[0].wins)/(teams[0].losses)*100))/10%>%</h2>
-                            <%} else {%>
-                                <h2>W/L: N/A</h2>
-                                <%}%>
-                        </div>
-                    </li>
-                    </a>
-                <%}%>
+        <div class="matchesContainer">
+            <h2>Next Matches:</h2>
+            <div class="matchesCardContainer">
+                <div class="countContainer">
+                    <h3>RC vs Brian</h3>
+                    <h5>Monday, July 20</h5>
+                    <h5>@Bay Harbor</h5>
+                    <p id="countDown"></p>
+                </div>
+                <div class="countContainer">
+                    <h3>RC vs Brian</h3>
+                    <h5>Monday, July 27</h5>
+                    <h5>@Bay Harbor</h5>
+                    <p id="countDown2"></p>
+                </div>
+                <div class="countContainer">
+                    <h3>RC vs Brian</h3>
+                    <h5>Monday, Aug 03</h5>
+                    <h5>@Bay Harbor</h5>
+                    <p id="countDown3"></p>
+                </div>
+            </div>
+        </div>
 
-<!------------------------------------------------Second Place------------------------------------------------------------------>
-                <%if(teams.length>1){%>
-                    <a href="/teams/<%= teams[1]._id%>" class="teamAnchor">
-                    <li style="color: rgb(163, 162, 162)">
-                        <div class="teamCard" id="cardID2">
-                            <h3 class="teamName"><%= teams[1].teamName%></h3>
-                            <h2>Wins: <%= teams[1].wins%></h2>
-                            <h2>Losses: <%= teams[1].losses%></h2>
-                            <% if(teams[1].losses > 0) {%>
-                                <h2>W/L: <%= Math.round(10*((teams[1].wins)/(teams[1].losses)*100))/10%>%</h2>
-                            <%} else {%>
-                                <h2>W/L: N/A</h2>
-                                <%}%>                        
-                        </div>
-                    </li>
-                    </a>
-                <%}%>
-<!------------------------------------------------Third Place------------------------------------------------------------------>
-                <%if(teams.length>2){%>  
-                    <a href="/teams/<%= teams[2]._id%>" class="teamAnchor">              
-                    <li style="color: rgb(245, 169, 106)">
-                        <div id="cardID3" class="teamCard">
-                            <h3 class="teamName"><%= teams[2].teamName%></h3>
-                            <h2>Wins: <%= teams[2].wins%></h2>
-                            <h2>Losses: <%= teams[2].losses%></h2>
-                            <% if(teams[2].losses > 0) {%>
-                                <h2>W/L: <%= Math.round(10*((teams[2].wins)/(teams[2].losses)*100))/10%>%</h2>
-                            <%} else {%>
-                                <h2>W/L: N/A</h2>
-                                <%}%>
-                        </div>
-                    </li>
-                    </a>
-                <%}%>
-
-<!------------------------------------------------Fourth and Beyond------------------------------------------------------------->
-                <%if(teams.length>3){%>
-                    <%teams.splice(0,3)%>
-                    <% teams.forEach(team=>{%>
-                        <a href="/teams/<%= team._id%>" class="teamAnchor">
-                        <li style="color: black">
-                            <div id="cardID4" class="teamCard">
-                                <h3 class="teamName"><%= team.teamName%></h3>
-                                <h2>Wins: <%= team.wins%></h2>
-                                <h2>Losses: <%= team.losses%></h2>
-                                <% if(team.losses > 0) {%>
-                                    <h2>W/L: <%= Math.round(10*((team.wins)/(team.losses)*100))/10%>%</h2>
-                                <%} else {%>
-                                    <h2>W/L: N/A</h2>
-                                    <%}%>
-                            </div>
-                        </li>
+<!-- stats/standings -->
+    <div class="statsContainer">
+        <ol>
+            <h3>Standings</h3>
+            <div class="teamAndStats">
+                <div></div>
+                <div class="statsValues">
+                    <h6>W</h6>
+                    <h6>L</h6>
+                </div> 
+            </div>
+                <%teams.forEach(team =>{%>
+                    <div class="teamAndStats">
+                        <a href="/teams/<%= team._id%>">
+                            <li><%=team.teamName%></li>
                         </a>
-                    <%})%>
-                <%}%>
+                        <div class="statsValues">
+                            <div class="value"><%=team.wins%></div>
+                            <div class="value"><%=team.losses%></div>
+                        </div>
+                    </div>
+                <% }) %>
         </ol>
+<!-- Top ten players -->
+            <ol type="1">
+                <h3>Top Ten</h3>
+                <div class="teamAndStats">
+                    <div></div>
+                    <div class="statsValues">
+                        <h6>G</h6>
+                        <h6>GP</h6>
+                    </div> 
+                </div>
+                <%const topTen = players.splice(0,10)%>
+                <%topTen.forEach(player=>{%>
+                    <div class="teamAndStats">
+                        <li><%= player.first %> <%= player.last %></li>
+                        <div class="statsValues">
+                            <div class="value"><%= player.goals %></div>
+                            <div class="value"><%=player.gp%></div>
+                        </div>
+                    </div>
+                <%})%>
+            </ol>
+<!-- top ten goalie -->
+            <ol>
+                <h3>Top Ten</h3>
+                <div class="teamAndStats">
+                    <div></div>
+                    <div class="statsValues">
+                        <h6>W</h6>
+                        <h6>L</h6>
+                    </div> 
+                </div>
+                <%goalies.forEach(goalie=>{%>
+                    <div class="teamAndStats">
+                        <li><%= goalie.first %> <%= goalie.last %></li>
+                        <div class="statsValues">
+                            <div class="value"><%= goalie.wins %></div>
+                            <div class="value"><%=goalie.gp%></div>
+                        </div>
+                    </div>
+                <%})%>
+            </ol>
+        </div>
     </div>
 
     <%- include('./partials/footer.ejs') %>
+    
+    <script>
+        var countDownDate = new Date("Jul 20, 2020 20:00:00").getTime();
+        var countDownDate2 = new Date("Jul 27, 2020 20:00:00").getTime();
+        var countDownDate3 = new Date("Aug 03, 2020 20:00:00").getTime();
+        var x = setInterval(function() {
+        var now = new Date().getTime();
+        var distance = countDownDate - now;
+        var distance2 = countDownDate2 - now;
+        var distance3 = countDownDate3 - now;
 
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
+
+        var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+        var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000); 
+
+        var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
+        var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
+        var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000); 
+          document.getElementById("countDown").innerHTML = days + "d " + hours + "h "
+          + minutes + "m " + seconds + "s ";
+        if (distance < 0) {
+            document.getElementById("countDown").innerHTML = "EXPIRED";
+          }
+          document.getElementById("countDown2").innerHTML = days2 + "d " + hours2 + "h "
+          + minutes2 + "m " + seconds2 + "s ";
+        if (distance2 < 0) {
+            document.getElementById("countDown2").innerHTML = "EXPIRED";
+          }
+          document.getElementById("countDown3").innerHTML = days3 + "d " + hours3 + "h "
+          + minutes3 + "m " + seconds3 + "s ";
+        if (distance3 < 0) {
+            document.getElementById("countDown3").innerHTML = "EXPIRED";
+          }
+        }, 1000);
+        </script>
 </body>
 </html>
