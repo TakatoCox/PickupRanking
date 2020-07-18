@@ -67,7 +67,7 @@ body{
     border: 1px solid black;
   }
 }
-.countContainer{
+.matchContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -77,7 +77,7 @@ body{
   padding-top:5px;
   border-top: 2px solid rgb(255, 70, 70);
   background-color: rgb(198, 232, 255);
-  min-height: 130px;
+  min-height: 150px;
   h5{
     margin: 0;
     font-size: 15px;
@@ -91,8 +91,13 @@ body{
   }
 
 }
-.countDown{
-  margin-top:10px;
+.puckDropContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.countDownClass{
+  margin-top:0px;
   color: red;
   font-weight: bold;
 }
@@ -113,6 +118,18 @@ a{
 }
 h3{
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  font-size: 30px;
+  .teamNameLogo{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  img{
+    height:20px;
+  }
 }
 li{
   font-size: 25px;

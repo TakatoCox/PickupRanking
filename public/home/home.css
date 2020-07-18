@@ -93,7 +93,7 @@ body {
   }
 }
 
-.mainAreaContainer .countContainer {
+.mainAreaContainer .matchContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -112,25 +112,38 @@ body {
   padding-top: 5px;
   border-top: 2px solid #ff4646;
   background-color: #c6e8ff;
-  min-height: 130px;
+  min-height: 150px;
 }
 
-.mainAreaContainer .countContainer h5 {
+.mainAreaContainer .matchContainer h5 {
   margin: 0;
   font-size: 15px;
 }
 
-.mainAreaContainer .countContainer h4 {
+.mainAreaContainer .matchContainer h4 {
   color: red;
 }
 
-.mainAreaContainer .countContainer p {
+.mainAreaContainer .matchContainer p {
   color: #ee8383;
   font-weight: bold;
 }
 
-.mainAreaContainer .countDown {
-  margin-top: 10px;
+.mainAreaContainer .puckDropContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainAreaContainer .countDownClass {
+  margin-top: 0px;
   color: red;
   font-weight: bold;
 }
@@ -162,6 +175,34 @@ body {
 
 .mainAreaContainer h3 {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 30px;
+}
+
+.mainAreaContainer h3 .teamNameLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mainAreaContainer h3 img {
+  height: 20px;
 }
 
 .mainAreaContainer li {
