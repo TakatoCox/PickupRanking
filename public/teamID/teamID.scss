@@ -11,13 +11,14 @@
         margin: 0;
         padding: 0;
         margin: 20px;
+        border-top: 1px solid red;
     }
     h6{
         font-size: 12px;
         font-weight: 1000;
         margin: 0;
         text-decoration: underline;
-        border-left: 2px solid black;
+        border-left: 1px solid black;
         width: 20px;
         padding-left: 5px;
         padding-right: 5px;
@@ -70,10 +71,10 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
-    border: 1px solid black; 
     width: 300px;
     background-color: rgb(149, 213, 255);
     border: 1px solid rgb(255, 65, 65);
+    border-top: none;
     .statsValues{
         display: flex;
         flex-direction: row;

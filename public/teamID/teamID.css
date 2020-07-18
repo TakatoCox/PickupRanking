@@ -23,6 +23,7 @@
   margin: 0;
   padding: 0;
   margin: 20px;
+  border-top: 1px solid red;
 }
 
 .mainArea h6 {
@@ -30,7 +31,7 @@
   font-weight: 1000;
   margin: 0;
   text-decoration: underline;
-  border-left: 2px solid black;
+  border-left: 1px solid black;
   width: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -112,10 +113,10 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid black;
   width: 300px;
   background-color: #95d5ff;
   border: 1px solid #ff4141;
+  border-top: none;
 }
 
 .playerAndGoals .statsValues {
