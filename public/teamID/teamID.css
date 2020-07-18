@@ -21,12 +21,11 @@
 
 .mainArea h1 {
   font-size: 40px;
-  color: #1100ff;
+  color: black;
 }
 
 .mainArea ol {
   margin: 0;
-  width: 100%;
   padding: 0;
   margin: 20px;
 }
@@ -98,6 +97,8 @@
           align-items: flex-end;
   border: 1px solid black;
   width: 300px;
+  background-color: #a4f1ff;
+  border: 1px solid #ff4141;
 }
 
 .playerAndGoals .statsValues {

@@ -9,11 +9,10 @@
     }
     h1{
         font-size:40px;
-        color: rgb(17, 0, 255);
+        color: black;
     }
     ol{
         margin: 0;
-        width:100%;
         padding: 0;
         margin: 20px;
     }
@@ -65,6 +64,8 @@
     align-items: flex-end;
     border: 1px solid black; 
     width: 300px;
+    background-color: rgb(164, 241, 255);
+    border: 1px solid rgb(255, 65, 65);
     .statsValues{
         display: flex;
         flex-direction: row;

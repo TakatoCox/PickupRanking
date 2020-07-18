@@ -41,6 +41,7 @@
 
 .statsMainArea ol {
   padding: 0;
+  margin: 5px;
 }
 
 .statsMainArea li {
@@ -91,7 +92,8 @@
   -webkit-box-align: end;
       -ms-flex-align: end;
           align-items: flex-end;
-  border: 1px solid black;
+  border: 1px solid #ff4141;
+  background-color: #a4f1ff;
   min-width: 300px;
 }
 
