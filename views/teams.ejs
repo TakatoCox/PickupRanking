@@ -13,12 +13,12 @@
     <%- include('./partials/nav.ejs') %>
 <!-- Team Standings -->
     <div class="mainArea">
+        <div class="standingsTitle">Standings</div>
         <div class="teamsContainer">
-            <div class="teamsTitle">Standings</div>
             <div class="teamAndStats">
                 <div class="team" style="color:blue;"></div> 
-                    <div class="value">W</div>
-                    <div class="value">L</div>
+                    <h6>W</h6>
+                    <h6>L</h6>
             </div>
             <ol class="teamList" type="1s">
                 <%winsSorted.forEach(team =>{%>

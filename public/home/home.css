@@ -9,7 +9,10 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: white;
+  background-image: url("../ice.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 .mainAreaContainer {
@@ -83,11 +86,13 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  overflow: scroll;
+  overflow: auto;
   width: 100%;
   max-height: 500px;
   background-color: white;
   margin: 16px;
+  -webkit-box-shadow: 5px 5px 5px 5px #757575;
+          box-shadow: 5px 5px 5px 5px #757575;
 }
 
 @media (max-width: 400px) {
@@ -115,7 +120,7 @@ body {
   width: 100%;
   padding-top: 5px;
   border-top: 2px solid #ff4646;
-  background-color: #a4f1ff;
+  background-color: #95d5ff;
   min-height: 130px;
 }
 
@@ -182,7 +187,7 @@ body {
   font-size: 12px;
   margin: 0;
   text-decoration: underline;
-  border-left: 2px solid black;
+  border-left: 1px solid black;
   width: 20px;
   padding-left: 5px;
   padding-right: 5px;
@@ -207,8 +212,9 @@ body {
       -ms-flex-align: end;
           align-items: flex-end;
   border: 1px solid red;
+  border-bottom: none;
   min-width: 280px;
-  background-color: #a4f1ff;
+  background-color: #95d5ff;
 }
 
 .teamAndStats .statsValues {

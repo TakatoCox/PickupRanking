@@ -1,3 +1,13 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    background-image: url("../ice.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
 .aboutMainArea{
     display: flex;
     flex-direction: column;
@@ -27,8 +37,9 @@
 }
 .image{
     margin-top: 25px;
-    height: 210px;
+    height: 180px;
     width: auto;
+    box-shadow: 5px 5px 5px 5px rgb(117, 117, 117);
 }
 @media(max-width:350px){
     .image{

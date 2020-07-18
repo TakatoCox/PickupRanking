@@ -14,8 +14,10 @@
           align-items: center;
   border: 2px solid #27a4f8;
   padding: 10px;
-  background: -webkit-gradient(linear, left bottom, right top, from(white), color-stop(65%), to(lightblue));
-  background: linear-gradient(to top right, white, 65%, lightblue);
+  background: -webkit-gradient(linear, left bottom, right top, from(white), color-stop(65%), to(#95d5ff));
+  background: linear-gradient(to top right, white, 65%, #95d5ff);
+  -webkit-box-shadow: 5px 5px 5px 5px #757575;
+          box-shadow: 5px 5px 5px 5px #757575;
 }
 
 .addTeamTitle {
