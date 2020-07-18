@@ -7,10 +7,6 @@
     @media(max-width:800px){
         margin-top: 30px;
     }
-    h1{
-        font-size:40px;
-        color: black;
-    }
     ol{
         margin: 0;
         padding: 0;
@@ -47,6 +43,18 @@
         padding-right: 0px;
         margin-left: 35px;
         margin-right: 3px;
+    }
+}
+.imageAndTitle{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    h1{
+        font-size:40px;
+        color: black;
+    }
+    .image{
+        height: 30px;
     }
 }
 .listsComponent{

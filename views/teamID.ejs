@@ -11,7 +11,19 @@
 <body>
     <%- include('./partials/nav.ejs') %> 
     <div class="mainArea">
-        <h1><%=team.teamName%></h1>
+        <div class="imageAndTitle">
+                <%if(team._id == '5f10cf5cb05ade1410d0eb82'){%>
+                <img class="image" src="/teamID/bruins.png" alt="Bruins">
+                    <h1><%=team.teamName%></h1>
+                <img class="image" src="/teamID/bruins.png" alt="Bruins">
+            <%} else if(team.id == '5f10ceedb05ade1410d0eb81'){%>
+                <img class="image" src="/teamID/flyers.png" alt="Bruins">
+                    <h1><%=team.teamName%></h1>
+                <img class="image" src="/teamID/flyers.png" alt="Bruins">
+            <%} else {%>
+                <h1><%=team.teamName%></h1>
+            <%}%>
+        </div>
             <div class="listsComponent">
                 <ol>
                     <div class="playerAndGoals">

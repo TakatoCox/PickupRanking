@@ -19,11 +19,6 @@
   }
 }
 
-.mainArea h1 {
-  font-size: 40px;
-  color: black;
-}
-
 .mainArea ol {
   margin: 0;
   padding: 0;
@@ -63,6 +58,28 @@
   padding-right: 0px;
   margin-left: 35px;
   margin-right: 3px;
+}
+
+.imageAndTitle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.imageAndTitle h1 {
+  font-size: 40px;
+  color: black;
+}
+
+.imageAndTitle .image {
+  height: 30px;
 }
 
 .listsComponent {
