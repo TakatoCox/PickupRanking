@@ -23,7 +23,7 @@
                 </div>
                 <%players.forEach(player=>{%>
                     <div class="nameAndStats">
-                        <a href="/players/<%=player.first%> <%=player.last%>">
+                        <a href="/players/<%=player.first%>/<%=player.last%>">
                             <li><%=player.first%> <%=player.last%></li>
                         </a>                        
                         <div class="statsValues">
@@ -43,7 +43,7 @@
                 </div>
                 <%goalies.forEach(goalie=>{%>
                     <div class="nameAndStats">
-                        <a href="/players/<%=goalie.first%> <%=goalie.last%>">
+                        <a href="/players/<%=goalie.first%>/<%=goalie.last%>">
                             <li><%=goalie.first%> <%=goalie.last%></li>
                         </a>                        
                         <div class="statsValues">

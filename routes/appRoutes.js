@@ -108,11 +108,26 @@ router.get('/teams/:id', (req,res)=>{
   })
 })
 ///////////////////////Individual Player Page/////////////////////////////
-router.get('/players/:id', (req,res)=>{
-  const name = req.params.id;
-  console.log(name);
-    res.render('player',{id:name});
+router.get('/players/:first/:last', (req,res)=>{
+  const first= req.params.first;
+  const last = req.params.last;
+
+  Team.find().then(result=>{
+    const playersArray = [];
+
+    result.map(team=>{
+      playersArray.push(...team.players)
+    })
+
+    const player = playersArray.filter(person=>{
+      return (person.first == first && person.last == last);
+    })
+    console.log(player);
+    res.render('player',{first,last,player});
   })
+
+});
+
 
 ///////////////////////404/////////////////////////////
 router.use((req,res)=>{

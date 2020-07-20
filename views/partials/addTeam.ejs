@@ -31,41 +31,55 @@
     var z = 0;
     var arrayPlayer = Array();
     var arrayGoalie = Array();
+    const playerFirst = document.getElementById("playerFirstName");
+    const playerLast = document.getElementById("playerLastName");
+    const goalieFirst = document.getElementById("goalieFirstName");
+    const goalieLast = document.getElementById("goalieLastName");
 
     function add_player_to_array()
     {
-        if(arrayPlayer.length < 15){
-        arrayPlayer[x] = {first: document.getElementById("playerFirstName").value,
-                        last: document.getElementById("playerLastName").value,
-                        goals: 0,
-                        gp:0}
+        if(arrayPlayer.length < 15 && playerLast.value && playerFirst.value){
+        arrayPlayer[x] = {
+            first: playerFirst.value,
+            last: playerLast.value,
+            goals: 0,
+            gp:0
+        }
         x++;
-        document.getElementById("playerFirstName").value = "";
-        document.getElementById("playerLastName").value = "";
+        playerFirst.value = "";
+        playerLast.value = "";
 
         const stringPlayers = JSON.stringify(arrayPlayer);
         document.getElementById("players").value = stringPlayers;
 
-        } else {
+        console.log(stringPlayers);
+
+        } else if(arrayPlayer.length>=15){
             alert("Maximum Number of Players Exceeded!");
+        } else {
+            alert("Please add First Name and Last Name");
         }
     }
 
     function add_goalie_to_array()
     {
-        if(arrayGoalie.length < 3){
-        arrayGoalie[z] = {first:document.getElementById("goalieFirstName").value,
-                        last: document.getElementById("goalieLastName").value,
-                        wins: 0,
-                        gp:0};
+        if(arrayGoalie.length < 3  && goalieLast.value && goalieFirst.value){
+        arrayGoalie[z] = {
+            first:goalieFirst.value,
+            last: goalieLast.value,
+            wins: 0,
+            gp:0
+        };
         z++;
-        document.getElementById("goalieFirstName").value = "";
-        document.getElementById("goalieLastName").value = "";
+        goalieFirst.value = "";
+        goalieLast.value = "";
 
         const stringGoalies = JSON.stringify(arrayGoalie);
         document.getElementById("goalies").value = stringGoalies;
-        } else {
+        } else if(arrayGoalie.length >= 15){
             alert("Maximum Number of Goalies Exceeded!");
+        } else {
+            alert("Please add First Name and Last Name")
         }
     }
 
