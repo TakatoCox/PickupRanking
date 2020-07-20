@@ -39,6 +39,7 @@ body{
         padding-right: 3px;
         padding-left: 0;
         margin-left: 45px;
+        width: 100%;
     }
     h6{
         font-size: 12px;
@@ -62,15 +63,21 @@ body{
         padding-right: 3px;
         font-weight: 500;
     }
+    a{
+        color: black;
+        :hover{
+            color:blue;
+        }
+    }
     .nameAndStats{
-        display:flex;
+        display: flex;
         flex-direction: row;
-        justify-content: space-between; 
+        justify-content: space-between;
         align-items: flex-end;
+        width: 300px;
+        background-color: rgb(255, 255, 255);
         border: 1px solid rgb(255, 65, 65);
         border-top: none;
-        background-color: rgb(255, 255, 255);
-        min-width: 300px; 
         .statsValues{
             display: flex;
             flex-direction: row;

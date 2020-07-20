@@ -54,6 +54,12 @@ body{
         margin-left: 45px;
         margin-right: 3px;
     }
+    a{
+        color: black;
+    }
+    a:hover{
+        color: blue;
+    }
 }
 .imageAndTitle{
     display: flex;

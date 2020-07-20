@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/player/player.css">
+    <link rel="stylesheet" href="/nav/nav.css">
+    <link rel="stylesheet" href="/footer/footer.css">
+     <!--Import materialize.css-->
+     <%- include('./partials/head.ejs') %>
+</head>
+<body>
+    <%- include('./partials/nav.ejs') %> 
+    <div class="mainAreaContainer">
+        <h1 class="card"><%=id%></h1>
+        <img src="/player/profilePic.png" alt="Profile Pic">
+    </div>
+    <%- include('./partials/footer.ejs') %>
+</body>
+</html>

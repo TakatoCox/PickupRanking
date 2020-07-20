@@ -100,7 +100,9 @@
                 <%const topTen = players.splice(0,10)%>
                 <%topTen.forEach(player=>{%>
                     <div class="teamAndStats">
-                        <li><%= player.first %> <%= player.last %></li>
+                        <a href="/players/<%=player.first%> <%=player.last%>">
+                            <li><%= player.first %> <%= player.last %></li>
+                        </a>
                         <div class="statsValues">
                             <div class="value"><%= player.goals %></div>
                             <div class="value"><%=player.gp%></div>
@@ -120,7 +122,9 @@
                 </div>
                 <%goalies.forEach(goalie=>{%>
                     <div class="teamAndStats">
-                        <li><%= goalie.first %> <%= goalie.last %></li>
+                        <a href="/players/<%=goalie.first%> <%=goalie.last%>">
+                            <li><%= goalie.first %> <%= goalie.last %></li>
+                        </a>
                         <div class="statsValues">
                             <div class="value"><%= goalie.wins %></div>
                             <div class="value"><%=goalie.gp%></div>

@@ -107,6 +107,12 @@ router.get('/teams/:id', (req,res)=>{
     console.log(err);
   })
 })
+///////////////////////Individual Player Page/////////////////////////////
+router.get('/players/:id', (req,res)=>{
+  const name = req.params.id;
+  console.log(name);
+    res.render('player',{id:name});
+  })
 
 ///////////////////////404/////////////////////////////
 router.use((req,res)=>{

@@ -78,6 +78,14 @@ body {
   margin-right: 3px;
 }
 
+.mainArea a {
+  color: black;
+}
+
+.mainArea a:hover {
+  color: blue;
+}
+
 .imageAndTitle {
   display: -webkit-box;
   display: -ms-flexbox;

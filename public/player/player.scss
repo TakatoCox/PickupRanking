@@ -1,0 +1,23 @@
+.mainAreaContainer{
+    min-width: 98vw;
+    min-height: 60vh;
+    margin-top: 107px;
+    margin-bottom: 57px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    @media(max-width:800px){
+      margin-top: 30px;
+  }
+  @media(min-width:850px){
+    width: 80%;
+  }
+  img{
+      height:200px;
+      border: 2px solid red;
+  }
+}
