@@ -73,6 +73,7 @@
                 <div class="statsValues">
                     <h6>W</h6>
                     <h6>L</h6>
+                    <h6>D</h6>
                 </div> 
             </div>
                 <%teams.forEach(team =>{%>
@@ -83,6 +84,7 @@
                         <div class="statsValues">
                             <div class="value"><%=team.wins%></div>
                             <div class="value"><%=team.losses%></div>
+                            <div class="value"><%=team.draws%></div>
                         </div>
                     </div>
                 <% }) %>
@@ -111,7 +113,7 @@
                 <%})%>
             </ol>
 <!-- top ten goalie -->
-            <h3>Top 10 Goalies</h3>
+            <h3>Top Goalies</h3>
             <ol>
                 <div class="teamAndStats">
                     <div></div>

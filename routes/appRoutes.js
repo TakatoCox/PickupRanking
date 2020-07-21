@@ -24,6 +24,7 @@ router.get('/',(req,res)=>{
         const goalies = arrGoalieSorted.sort(function(a,b){
           return b.wins - a.wins
         })
+        console.log(teams);
       res.render('home', {teams, players, goalies});
     })
     .catch(err=>console.log(err));
