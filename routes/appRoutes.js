@@ -1,7 +1,6 @@
 const router = require('express').Router();
 let Team = require('../models/team');
 var bodyParser = require('body-parser');
-const { render } = require('node-sass');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 
 ///////////////////////Home/////////////////////////////
@@ -45,7 +44,8 @@ router.post('/teams', parseUrlencoded, (req,res)=>{
     players: playerParse,
     goalies: goalieParse,
     wins: 0,
-    losses: 0
+    losses: 0,
+    draw: 0
   });
 
   newTeam.save()
@@ -116,14 +116,15 @@ router.get('/players/:first/:last', (req,res)=>{
     const playersArray = [];
 
     result.map(team=>{
-      playersArray.push(...team.players)
+      playersArray.push(...team.players);
+      playersArray.push(...team.goalies);
     })
 
-    const player = playersArray.filter(person=>{
+    const personInfo = playersArray.filter(person=>{
       return (person.first == first && person.last == last);
     })
-    console.log(player);
-    res.render('player',{first,last,player});
+    console.log(personInfo);
+    res.render('player',{first,last,personInfo});
   })
 
 });
