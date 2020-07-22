@@ -4,64 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/home/home.css">
-    <link rel="stylesheet" href="/nav/nav.css">
-    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="/partials/upcoming/upcoming.css">
+    <link rel="stylesheet" href="/partials/pastMatches/pastMatches.css">
+    <link rel="stylesheet" href="/partials/nav/nav.css">
+    <link rel="stylesheet" href="/partials/footer/footer.css">
 </head>
     <%- include('./partials/head.ejs')%> 
 <body>
     <%- include('./partials/nav.ejs') %>
     <div class="zamboni"></div>
-<!-- Next Matches -->
+
     <div class="mainAreaContainer">
-        <div class="matchesContainer">
-            <h2>Upcoming Matchups:</h2>
-            <div class="matchesCardContainer">
-<!----------------------Matchup---------------------->
-                <div class="matchContainer">
-                    <h3>
-                        <div class="teamNameLogo">Black</div>
-                        &nbsp;vs&nbsp;
-                        <div class="teamNameLogo">White</div>
-                    </h3>                    
-                    <h5>Monday, July 27</h5>
-                    <h5>8:00</h5>
-                    <h5>@The Skating Edge</h5>
-                    <div class="puckDropContainer">
-                        <div class="countDownClass">Puck Drop:</div>
-                        <div id="countDown2" class="countDownClass">Loading...</div>
-                    </div>                
-                </div>
-<!----------------------Matchup---------------------->
-               <div class="matchContainer">
-                    <h3>
-                        <div class="teamNameLogo">Black</div>
-                        &nbsp;vs&nbsp;
-                        <div class="teamNameLogo">White</div>
-                    </h3>                    
-                    <h5>Monday, Aug 03</h5>
-                    <h5>8:00</h5>
-                    <h5>@The Skating Edge</h5>
-                    <div class="puckDropContainer">
-                        <div class="countDownClass">Puck Drop:</div>
-                        <div id="countDown3" class="countDownClass">Loading...</div>
-                    </div>
-                </div>
-<!----------------------Matchup---------------------->
-                <div class="matchContainer">
-                    <h3>
-                        <div class="teamNameLogo">Black</div>
-                        &nbsp;vs&nbsp;
-                        <div class="teamNameLogo">White</div>
-                    </h3>
-                    <h5>Monday, July 20</h5>
-                    <h5>8:00</h5>
-                    <h5>@The Skating Edge</h5>
-                    <div class="puckDropContainer">
-                        <div class="countDownClass">Puck Drop:</div>
-                        <div id="countDown" class="countDownClass">Loading...</div>
-                    </div>                
-                </div>
-            </div>
+
+<!-- matches container -->
+        <div class="pastAndUpcomingContainer">
+            <!-- Past matches -->
+            <%- include('./partials/pastMatches.ejs') %>
+            <!-- upcoming matches -->
+            <%- include('./partials/upcoming.ejs') %>
         </div>
 
 <!-- standings -->
@@ -69,11 +29,11 @@
         <h3>Standings</h3>
         <ol>
             <div class="teamAndStats">
-                <div></div>
+                <div class="legend">(DNF=did not finish)</div>
                 <div class="statsValues">
                     <h6>W</h6>
                     <h6>L</h6>
-                    <h6>D</h6>
+                    <h6>DNF</h6>
                 </div> 
             </div>
                 <%teams.forEach(team =>{%>
@@ -84,7 +44,7 @@
                         <div class="statsValues">
                             <div class="value"><%=team.wins%></div>
                             <div class="value"><%=team.losses%></div>
-                            <div class="value"><%=team.draws%></div>
+                            <div class="value"><%=team.DNF%></div>
                         </div>
                     </div>
                 <% }) %>
@@ -93,7 +53,7 @@
             <h3>Top 10 Goal Scorers</h3>
             <ol type="1">
                 <div class="teamAndStats">
-                    <div></div>
+                    <div class="legend">(G=goals, GP=games played)</div>
                     <div class="statsValues">
                         <h6>G</h6>
                         <h6>GP</h6>
@@ -116,11 +76,11 @@
             <h3>Top Goalies</h3>
             <ol>
                 <div class="teamAndStats">
-                    <div></div>
+                    <div class="legend">(DNF=did not finish)</div>
                     <div class="statsValues">
                         <h6>W</h6>
                         <h6>L</h6>
-                        <h6>D</h6>
+                        <h6>DNF</h6>
                         <h6>GP</h6>
                     </div> 
                 </div>
@@ -132,7 +92,7 @@
                         <div class="statsValues">
                             <div class="value"><%= goalie.wins %></div>
                             <div class="value"><%= goalie.losses %></div>
-                            <div class="value"><%= goalie.draw %></div>
+                            <div class="value"><%= goalie.DNF %></div>
                             <div class="value"><%=goalie.gp%></div>
                         </div>
                     </div>
@@ -140,49 +100,6 @@
             </ol>
         </div>
     </div>
-
     <%- include('./partials/footer.ejs') %>
-    
-    <script>
-        var countDownDate = new Date("Aug 7, 2020 20:00:00").getTime();
-        var countDownDate2 = new Date("Jul 27, 2020 20:00:00").getTime();
-        var countDownDate3 = new Date("Aug 3, 2020 20:00:00").getTime();
-        var x = setInterval(function() {
-        var now = new Date().getTime();
-        var distance = countDownDate - now;
-        var distance2 = countDownDate2 - now;
-        var distance3 = countDownDate3 - now;
-
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
-
-        var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
-        var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000); 
-
-        var days3 = Math.floor(distance3 / (1000 * 60 * 60 * 24));
-        var hours3 = Math.floor((distance3 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        var minutes3 = Math.floor((distance3 % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds3 = Math.floor((distance3 % (1000 * 60)) / 1000); 
-          document.getElementById("countDown").innerHTML = days + "d " + hours + "h "
-          + minutes + "m " + seconds + "s ";
-        if (distance < 0) {
-            document.getElementById("countDown").innerHTML = "Passed";
-          }
-          document.getElementById("countDown2").innerHTML = days2 + "d " + hours2 + "h "
-          + minutes2 + "m " + seconds2 + "s ";
-        if (distance2 < 0) {
-            document.getElementById("countDown2").innerHTML = "Passed";
-          }
-          document.getElementById("countDown3").innerHTML = days3 + "d " + hours3 + "h "
-          + minutes3 + "m " + seconds3 + "s ";
-        if (distance3 < 0) {
-            document.getElementById("countDown3").innerHTML = "Passed";
-          }
-        }, 1000);
-        </script>
 </body>
 </html>

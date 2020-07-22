@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/stats/stats.css">
-    <link rel="stylesheet" href="/nav/nav.css">
-    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="/partials/nav/nav.css">
+    <link rel="stylesheet" href="/partials/footer/footer.css">
 </head>
     <%- include('./partials/head.ejs') %>
 <body>
@@ -39,7 +39,7 @@
                     <div class="statsValues">
                         <h6>W</h6>
                         <h6>L</h6>
-                        <h6>D</h6>
+                        <h6>DNF</h6>
                         <h6>GP</h6>
                     </div>
                 </div>
@@ -51,7 +51,7 @@
                         <div class="statsValues">
                             <div class="value"><%= goalie.wins %></div>
                             <div class="value"><%= goalie.losses %></div>
-                            <div class="value"><%= goalie.draw %></div>
+                            <div class="value"><%= goalie.DNF %></div>
                             <div class="value"><%=goalie.gp%></div>
                         </div>
                     </div>

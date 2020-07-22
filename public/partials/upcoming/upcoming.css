@@ -1,0 +1,150 @@
+.matchesContainer {
+  min-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  margin-right: 10px;
+}
+
+.matchesContainer h2 {
+  margin: 0;
+  margin-bottom: 5px;
+  font-size: 30px;
+  text-decoration: underline;
+}
+
+@media (max-width: 365px) {
+  .matchesContainer h2 {
+    font-size: 25px;
+  }
+}
+
+.matchesCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+  background-color: white;
+  margin: 0;
+  border-top: 1px solid #ff4646;
+  border-bottom: 1px solid #ff4646;
+  -webkit-box-shadow: 5px 5px 5px 5px #757575;
+          box-shadow: 5px 5px 5px 5px #757575;
+}
+
+@media (max-width: 700px) {
+  .matchesCardContainer {
+    max-width: 100%;
+  }
+}
+
+.matchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  padding-top: 5px;
+  background: none;
+  min-height: 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 1px solid #ff4646;
+  border-right: 1px solid #ff4646;
+}
+
+.matchContainer h5 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.matchContainer h4 {
+  color: red;
+}
+
+.matchContainer p {
+  color: #ee8383;
+  font-weight: bold;
+}
+
+.puckDropContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.countDownClass {
+  margin-top: 0px;
+  color: red;
+  font-weight: bold;
+}
+
+h3 {
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  font-size: 30px;
+}
+
+h3 .teamNameLogo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+h3 img {
+  height: 20px;
+}
+/*# sourceMappingURL=upcoming.css.map */

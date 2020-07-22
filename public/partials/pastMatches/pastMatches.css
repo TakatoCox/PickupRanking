@@ -1,0 +1,119 @@
+.pastMatchesContainer {
+  min-width: 280px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+  margin-right: 10px;
+}
+
+.pastMatchesContainer h2 {
+  font-size: 30px;
+  margin: 0;
+  margin-bottom: 5px;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.pastMatchesCardContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow: auto;
+  background-color: white;
+  margin: 0;
+  border-top: 1px solid #ff4646;
+  border-bottom: 1px solid #ff4646;
+  -webkit-box-shadow: 5px 5px 5px 5px #757575;
+          box-shadow: 5px 5px 5px 5px #757575;
+  max-width: 600px;
+}
+
+@media (max-width: 700px) {
+  .pastMatchesCardContainer {
+    max-width: 100%;
+  }
+}
+
+.pastMatchContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: black;
+  padding-top: 5px;
+  background: none;
+  min-height: 150px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-left: 1px solid #ff4646;
+  border-right: 1px solid #ff4646;
+}
+
+.pastMatchContainer .teamNameScore {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.pastMatchContainer .teams {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 5px;
+}
+
+.pastMatchContainer .allGames {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+/*# sourceMappingURL=pastMatches.css.map */

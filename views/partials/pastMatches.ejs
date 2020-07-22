@@ -1,0 +1,47 @@
+<div class="pastMatchesContainer">
+    <h2>Scores</h2>
+    <div class="pastMatchesCardContainer">
+
+
+        <%games.map(game=>{%>
+<!----------------------Matchup---------------------->
+            <div class="pastMatchContainer">
+            <div class="dateOfGame"><%=game.date%></div>
+        <!-- Home Team -->
+                <div class="teams">
+                    <div class="teamNameScore">
+                        <h3 class="teamName"><%=game.homeTeamName%></h3>
+                        <%if(game.score.score.home > game.score.score.away){%>
+                            <div style="color: green"><%=game.score.score.home%></div>
+                        <%} else if(game.score.score.home < game.score.score.away){%>
+                            <div style="color: red"><%=game.score.score.home%></div>
+                        <%} else {%>
+                            <div><%=game.score.score.home%></div>
+                            <%}%>
+                    </div>
+
+                    &nbsp;vs&nbsp;
+
+            <!-- Away Team -->
+                    <div class="teamNameScore">
+                        <h3 class="teamName"><%=game.awayTeamName%></h3>
+                        <%if(game.score.score.home < game.score.score.away){%>
+                            <div style="color: green"><%=game.score.score.away%></div>
+                        <%} else if(game.score.score.home > game.score.score.away){%>
+                            <div style="color: red"><%=game.score.score.away%></div>
+                        <%} else {%>
+                            <div><%=game.score.score.away%></div>
+                            <%}%>
+                    </div>
+                </div>
+                <!-- all games -->
+                <div class="allGames">
+                    <%const games = game.score.allGames;%>
+                    <%for(const gameInd in games){%>
+                        <div class="gameInd"><%=gameInd%>: <%=games[gameInd].home%>-<%=games[gameInd].away%></div>
+                    <%}%>
+                </div>               
+            </div>
+        <%})%>
+    </div>
+</div>

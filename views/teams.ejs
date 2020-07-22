@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/teams/teams.css">
-    <link rel="stylesheet" href="/addTeamForm/form.css">
-    <link rel="stylesheet" href="/nav/nav.css">
-    <link rel="stylesheet" href="/footer/footer.css">
+    <link rel="stylesheet" href="/partials/addTeamForm/form.css">
+    <link rel="stylesheet" href="/partials/nav/nav.css">
+    <link rel="stylesheet" href="/partials/footer/footer.css">
 </head>
     <%- include('./partials/head.ejs') %>
 <body>
@@ -16,11 +16,11 @@
         <div class="standingsTitle">Standings</div>
         <div class="teamsContainer">
             <div class="nameAndStats">
-                <h4>Players</h4> 
+                <div class="legend">(DNF=did not finish)</div>
                 <div class="statsValues">
                     <h6>W</h6>
                     <h6>L</h6>
-                    <h6>D</h6>
+                    <h6>DNF</h6>
                 </div>
             </div>
             <ol class="teamList" type="1s">
@@ -32,7 +32,7 @@
                         <div class="statsValues">
                             <div class="value"><%=team.wins%></div>
                             <div class="value"><%=team.losses%></div>
-                            <div class="value"><%=team.draws%></div>
+                            <div class="value"><%=team.DNF%></div>
                         </div>
                     </div>
                 <% }) %>

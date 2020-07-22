@@ -1,0 +1,84 @@
+.matchesContainer{
+    min-width: 280px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 5px;
+    margin-right: 10px;
+    h2{
+      margin: 0;
+      margin-bottom: 5px;
+      font-size: 30px;
+      text-decoration: underline;
+      @media (max-width:365px) {
+        font-size: 25px;
+      }
+    }
+  }
+  .matchesCardContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: auto;
+    background-color: white;
+    margin: 0;
+    border-top: 1px solid rgb(255, 70, 70);
+    border-bottom: 1px solid rgb(255, 70, 70);
+    box-shadow: 5px 5px 5px 5px rgb(117, 117, 117);
+    @media(max-width:700px){
+      max-width: 100%;
+    }
+  }
+  .matchContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: black;
+    padding-top:5px;
+    background: none;
+    min-height: 150px;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-left: 1px solid rgb(255, 70, 70);
+    border-right: 1px solid rgb(255, 70, 70);
+    h5{
+      margin: 0;
+      font-size: 15px;
+    }
+    h4{
+      color: red;
+    }
+    p{
+      color: rgb(238, 131, 131);
+      font-weight: bold;
+    }
+  
+  }
+  .puckDropContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .countDownClass{
+    margin-top:0px;
+    color: red;
+    font-weight: bold;
+  }
+  h3{
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    font-size: 30px;
+    .teamNameLogo{
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+    img{
+      height:20px;
+    }
+  }

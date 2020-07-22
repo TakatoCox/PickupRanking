@@ -41,8 +41,7 @@ body {
   }
 }
 
-.mainAreaContainer .matchesContainer {
-  min-width: 280px;
+.mainAreaContainer .pastAndUpcomingContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -50,102 +49,17 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: 20px;
+  max-width: 100%;
+  margin-bottom: 15px;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  min-height: 70vh;
 }
 
-.mainAreaContainer .matchesContainer h2 {
-  margin: 0;
-}
-
-.mainAreaContainer .matchesCardContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow: auto;
-  width: 100%;
-  max-height: 500px;
-  background-color: white;
-  margin: 16px;
-  -webkit-box-shadow: 5px 5px 5px 5px #757575;
-          box-shadow: 5px 5px 5px 5px #757575;
-}
-
-@media (max-width: 400px) {
-  .mainAreaContainer .matchesCardContainer {
-    max-height: 250px;
-    border: 1px solid black;
+@media (max-width: 930px) {
+  .mainAreaContainer .pastAndUpcomingContainer {
+    min-height: 0px;
   }
-}
-
-.mainAreaContainer .matchContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  color: black;
-  width: 100%;
-  padding-top: 5px;
-  border-top: 2px solid #ff4646;
-  background-color: #c6e8ff;
-  min-height: 150px;
-}
-
-.mainAreaContainer .matchContainer h5 {
-  margin: 0;
-  font-size: 15px;
-}
-
-.mainAreaContainer .matchContainer h4 {
-  color: red;
-}
-
-.mainAreaContainer .matchContainer p {
-  color: #ee8383;
-  font-weight: bold;
-}
-
-.mainAreaContainer .puckDropContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mainAreaContainer .countDownClass {
-  margin-top: 0px;
-  color: red;
-  font-weight: bold;
 }
 
 .mainAreaContainer .statsContainer {
@@ -159,7 +73,14 @@ body {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  margin: 20px;
+  margin: 0px;
+}
+
+.mainAreaContainer .legend {
+  width: 100%;
+  font-size: 13px;
+  opacity: 50%;
+  text-align: center;
 }
 
 .mainAreaContainer ol {
@@ -167,6 +88,7 @@ body {
   max-height: 300px;
   overflow: auto;
   border-bottom: 1px solid red;
+  margin-top: 0;
 }
 
 .mainAreaContainer a {
@@ -188,23 +110,6 @@ body {
   font-size: 30px;
 }
 
-.mainAreaContainer h3 .teamNameLogo {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mainAreaContainer h3 img {
-  height: 20px;
-}
-
 .mainAreaContainer li {
   font-size: 25px;
   text-decoration: underline;
@@ -220,7 +125,7 @@ body {
   margin: 0;
   text-decoration: underline;
   border-left: 1px solid black;
-  width: 20px;
+  width: 23px;
   padding-left: 5px;
   padding-right: 5px;
   height: 30px;
@@ -290,7 +195,7 @@ body {
   color: black;
   font-size: 25px;
   border-left: 1px solid black;
-  width: 20px;
+  width: 23px;
   text-align: center;
   height: 35px;
 }

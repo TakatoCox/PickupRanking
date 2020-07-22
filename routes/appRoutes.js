@@ -1,11 +1,19 @@
 const router = require('express').Router();
 let Team = require('../models/team');
+let Game = require('../models/game');
 var bodyParser = require('body-parser');
 var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 
 ///////////////////////Home/////////////////////////////
 router.get('/',(req,res)=>{
-  Team.find()
+  let games = [];
+
+  Game.find()
+  .then(result=>{
+    games = [...result];
+  })
+  .then(()=>{
+    Team.find()
     .then(result=>{
         const teams = result.sort(function (a, b) {
         return b.wins - a.wins;
@@ -24,10 +32,10 @@ router.get('/',(req,res)=>{
         const goalies = arrGoalieSorted.sort(function(a,b){
           return b.wins - a.wins
         })
-        console.log(teams);
-      res.render('home', {teams, players, goalies});
+      res.render('home', {teams, players, goalies, games});
     })
     .catch(err=>console.log(err));
+    })
   })
 
 ///////////////////////About/////////////////////////////
@@ -127,9 +135,7 @@ router.get('/players/:first/:last', (req,res)=>{
     console.log(personInfo);
     res.render('player',{first,last,personInfo});
   })
-
 });
-
 
 ///////////////////////404/////////////////////////////
 router.use((req,res)=>{
