@@ -11,7 +11,7 @@
         <input type="button" id="button1" value="Add" onclick="add_player_to_array(),display_player();"></input>
     </div>
     <div id="playerArray" type="text"></div> 
-    <input type="text" id="players" name="Players" style="display: none;">
+    <input type="text" id="players" name="Players" style="display: none;"/>
 
 
     <div class="goaliesForm">
@@ -21,7 +21,7 @@
         <input type="button" id="button2" value="Add" onclick="add_goalie_to_array(),display_goalie();"></input>
     </div>
     <div id="goalieArray" type="text" name="goalieName[]"></div>
-    <input type="text" id="goalies" name="Goalies" style="display: none;">
+    <input type="text" id="goalies" name="Goalies" style="display: none;"/>
 
     <button class="formSubmitButton">Submit</button>
 </form>
@@ -52,8 +52,6 @@
         const stringPlayers = JSON.stringify(arrayPlayer);
         document.getElementById("players").value = stringPlayers;
 
-        console.log(stringPlayers);
-
         } else if(arrayPlayer.length>=15){
             alert("Maximum Number of Players Exceeded!");
         } else {
@@ -70,6 +68,7 @@
             wins: 0,
             losses: 0,
             draw: 0,
+            DNF: 0,
             gp:0
         };
         z++;

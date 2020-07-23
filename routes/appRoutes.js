@@ -54,7 +54,7 @@ router.post('/teams', parseUrlencoded, (req,res)=>{
     goalies: goalieParse,
     wins: 0,
     losses: 0,
-    draw: 0
+    DNF: 0
   });
 
   newTeam.save()
