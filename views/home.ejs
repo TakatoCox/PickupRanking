@@ -15,9 +15,9 @@
     <div class="zamboni"></div>
 
     <div class="mainAreaContainer">
-
 <!-- matches container -->
         <div class="pastAndUpcomingContainer">
+        <div class="info">**(Unfinished Games Do Not Count Towards Standings/Stats)</div>
             <!-- Past matches -->
             <%- include('./partials/pastMatches.ejs') %>
             <!-- upcoming matches -->
@@ -29,11 +29,11 @@
         <h3>Standings</h3>
         <ol>
             <div class="teamAndStats">
-                <div class="legend">(DNF=did not finish)</div>
+                <div class="legend"></div>
                 <div class="statsValues">
                     <h6>W</h6>
                     <h6>L</h6>
-                    <h6>DNF</h6>
+                    <h6>PTS</h6>
                 </div> 
             </div>
                 <%teams.forEach(team =>{%>
@@ -44,7 +44,7 @@
                         <div class="statsValues">
                             <div class="value"><%=team.wins%></div>
                             <div class="value"><%=team.losses%></div>
-                            <div class="value"><%=team.DNF%></div>
+                            <div class="value"><%=team.PTS%></div>
                         </div>
                     </div>
                 <% }) %>
@@ -53,7 +53,7 @@
             <h3>Top 10 Goal Scorers</h3>
             <ol type="1">
                 <div class="teamAndStats">
-                    <div class="legend">(G=goals, GP=games played)</div>
+                    <div class="legend"></div>
                     <div class="statsValues">
                         <h6>G</h6>
                         <h6>GP</h6>
@@ -76,11 +76,10 @@
             <h3>Top Goalies</h3>
             <ol>
                 <div class="teamAndStats">
-                    <div class="legend">(DNF=did not finish)</div>
+                    <div class="legend"></div>
                     <div class="statsValues">
                         <h6>W</h6>
                         <h6>L</h6>
-                        <h6>DNF</h6>
                         <h6>GP</h6>
                     </div> 
                 </div>
@@ -92,7 +91,6 @@
                         <div class="statsValues">
                             <div class="value"><%= goalie.wins %></div>
                             <div class="value"><%= goalie.losses %></div>
-                            <div class="value"><%= goalie.DNF %></div>
                             <div class="value"><%=goalie.gp%></div>
                         </div>
                     </div>

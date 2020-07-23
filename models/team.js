@@ -9,7 +9,7 @@ const teamSchema = new Schema({
     players: [Object],
     goalies: [Object],
     wins: Number,
-    DNF:Number,
+    PTS:Number,
     losses: Number
 
 },{timestamps: true});

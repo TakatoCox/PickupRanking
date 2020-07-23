@@ -41,6 +41,10 @@ body {
   }
 }
 
+.mainAreaContainer .info {
+  text-align: center;
+}
+
 .mainAreaContainer .pastAndUpcomingContainer {
   display: -webkit-box;
   display: -ms-flexbox;
