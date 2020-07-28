@@ -48,6 +48,9 @@
   -webkit-box-shadow: 5px 5px 5px 5px #757575;
           box-shadow: 5px 5px 5px 5px #757575;
   max-width: 600px;
+  min-height: 200px;
+  border-left: 1px solid #ff4646;
+  border-right: 1px solid #ff4646;
 }
 
 @media (max-width: 700px) {
