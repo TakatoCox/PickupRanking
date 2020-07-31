@@ -6,11 +6,13 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    margin: 0px;
+    width: 99vw;
   }
 .statsMainArea{
     margin-top: 115px;
     margin-bottom: 55px;
-    width: 100%;
+    width: 99vw;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -23,7 +25,7 @@ body{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
-        width: 100vw;
+        width: 99vw;
     }
     ol{
         padding: 0;

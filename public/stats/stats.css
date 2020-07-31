@@ -13,12 +13,14 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: cover;
+  margin: 0px;
+  width: 99vw;
 }
 
 .statsMainArea {
   margin-top: 115px;
   margin-bottom: 55px;
-  width: 100%;
+  width: 99vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -53,7 +55,7 @@ body {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100vw;
+  width: 99vw;
 }
 
 .statsMainArea ol {
