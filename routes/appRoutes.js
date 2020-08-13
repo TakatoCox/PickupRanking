@@ -8,7 +8,7 @@ var parseUrlencoded = bodyParser.urlencoded({ extended: false });
 router.get('/',(req,res)=>{
   let games = [];
 
-  Game.find()
+  Game.find().sort({date: 1})
   .then(result=>{
     games = [...result];
   })
